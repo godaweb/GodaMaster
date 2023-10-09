@@ -6,6 +6,6 @@ using System.Text;
 namespace db_test.Menu
 {
     public class MainMenuList : Dictionary<string, List<IMainMenuItem>>
-    {
+    { 
     }
 }
