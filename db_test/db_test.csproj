@@ -1,0 +1,2475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3CDC72B3-F902-4F05-99ED-86F5360BE699}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>db_test</RootNamespace>
+    <AssemblyName>db_test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>027A3D3A48A990202C75CD81E251B1C57169376C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>db_test_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="GrapeCity.Framework.InputMan.v22, Version=2.2.2012.315, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.Framework.MultiRow.v22, Version=2.2.2012.315, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.Editors.v70, Version=7.0.2012.1121, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="GrapeCity.Win.MultiRow.v70, Version=7.0.2012.1121, Culture=neutral, PublicKeyToken=0f7a722ee3c2bdd9, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.MultiRow.VsDesign.Vs2010, Version=7.0.2012.1121, Culture=neutral, PublicKeyToken=0f7a722ee3c2bdd9, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComboBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common.cs" />
+    <Compile Include="CustomMoveToNextControl.cs" />
+    <Compile Include="DbForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DbForm.Designer.cs">
+      <DependentUpon>DbForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogClass.cs" />
+    <Compile Include="EOSドラスタ受注取込Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EOSドラスタ受注取込Form.Designer.cs">
+      <DependentUpon>EOSドラスタ受注取込Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EOSドラスタ受注取込FunctionKeyAction.cs" />
+    <Compile Include="EOSドラスタ受注取込Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EOSドラスタ受注取込Template.Designer.cs">
+      <DependentUpon>EOSドラスタ受注取込Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EOSドラスタ納品書発行Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EOSドラスタ納品書発行Form.Designer.cs">
+      <DependentUpon>EOSドラスタ納品書発行Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EOSドラスタ送信データ作成CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EOSドラスタ送信データ作成CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EOSドラスタ送信データ作成DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EOSドラスタ送信データ作成DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EOSドラスタ送信データ作成Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EOSドラスタ送信データ作成Form.Designer.cs">
+      <DependentUpon>EOSドラスタ送信データ作成Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EOSドラスタ送信データ作成FunctionKeyAction.cs" />
+    <Compile Include="EOSドラスタ送信データ作成Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EOSドラスタ送信データ作成Template.Designer.cs">
+      <DependentUpon>EOSドラスタ送信データ作成Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelCsvClass.cs" />
+    <Compile Include="EXCEL受注取込Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EXCEL受注取込Form.Designer.cs">
+      <DependentUpon>EXCEL受注取込Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EXCEL受注取込Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EXCEL受注取込Template.Designer.cs">
+      <DependentUpon>EXCEL受注取込Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EXCEL受注取込チェックリストCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EXCEL受注取込チェックリストCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FunctionKeyAction.cs" />
+    <Compile Include="FunctionKeyActionSirsakiSearch.cs" />
+    <Compile Include="FunctionKeyActionSyohinSearch.cs" />
+    <Compile Include="GcMultiRowExtension.cs" />
+    <Compile Include="Menu\IMainMenuItem.cs" />
+    <Compile Include="Menu\ItemContainerToIndexConverter.cs" />
+    <Compile Include="Menu\MainMenuControl.xaml.cs">
+      <DependentUpon>MainMenuControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MainMenuItemList.cs" />
+    <Compile Include="Menu\MainMenuList.cs" />
+    <Compile Include="Menu\MainMenuViewModel.cs" />
+    <Compile Include="Menu\MainMenuCategory.xaml.cs">
+      <DependentUpon>MainMenuCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MainMenuItem.cs" />
+    <Compile Include="Menu\Operator.cs" />
+    <Compile Include="monotaROオンライン発注リストForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monotaROオンライン発注リストForm.Designer.cs">
+      <DependentUpon>monotaROオンライン発注リストForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monotaROオンライン発注リストTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="monotaROオンライン発注リストTemplate.Designer.cs">
+      <DependentUpon>monotaROオンライン発注リストTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monotaRO一括発注DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>monotaRO一括発注DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="monotaRO一括発注Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monotaRO一括発注Form.Designer.cs">
+      <DependentUpon>monotaRO一括発注Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monotaRO一括発注FunctionKeyAction.cs" />
+    <Compile Include="monotaRO一括発注Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="monotaRO一括発注Template.Designer.cs">
+      <DependentUpon>monotaRO一括発注Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monotaRO出荷指示一覧表Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monotaRO出荷指示一覧表Form.Designer.cs">
+      <DependentUpon>monotaRO出荷指示一覧表Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monotaRO出荷指示一覧表Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="monotaRO出荷指示一覧表Template.Designer.cs">
+      <DependentUpon>monotaRO出荷指示一覧表Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monotaRO受注取込DataSet.cs">
+      <DependentUpon>monotaRO受注取込DataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="monotaRO受注取込DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>monotaRO受注取込DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="monotaRO受注取込チェックリストCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>monotaRO受注取込チェックリストCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="monotaRO受注問合せ入力Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monotaRO受注問合せ入力Form.Designer.cs">
+      <DependentUpon>monotaRO受注問合せ入力Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monotaRO受注問合せ入力Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="monotaRO受注問合せ入力Template.Designer.cs">
+      <DependentUpon>monotaRO受注問合せ入力Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monotaRO回答データ作成Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="monotaRO回答データ作成Template.Designer.cs">
+      <DependentUpon>monotaRO回答データ作成Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monotaRO回答データ作成Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monotaRO回答データ作成Form.Designer.cs">
+      <DependentUpon>monotaRO回答データ作成Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monotaRO売上データ作成Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monotaRO売上データ作成Form.Designer.cs">
+      <DependentUpon>monotaRO売上データ作成Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monotaRO売上データ作成Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="monotaRO売上データ作成Template.Designer.cs">
+      <DependentUpon>monotaRO売上データ作成Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monotaRO得意先別商品別受注残問合せForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monotaRO得意先別商品別受注残問合せForm.Designer.cs">
+      <DependentUpon>monotaRO得意先別商品別受注残問合せForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monotaRO得意先別商品別受注残問合せTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="monotaRO得意先別商品別受注残問合せTemplate.Designer.cs">
+      <DependentUpon>monotaRO得意先別商品別受注残問合せTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monotaRO発注送信データ作成Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monotaRO発注送信データ作成Form.Designer.cs">
+      <DependentUpon>monotaRO発注送信データ作成Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monotaRO発注送信データ作成Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="monotaRO発注送信データ作成Template.Designer.cs">
+      <DependentUpon>monotaRO発注送信データ作成Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SelectOperatorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SelectOperatorDialog.Designer.cs">
+      <DependentUpon>SelectOperatorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\GcMultiRowPrintExtension.cs" />
+    <Compile Include="Print\Printer.cs" />
+    <Compile Include="Print\PrintPreview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\PrintPreviewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print\PrintPreviewDialog.Designer.cs">
+      <DependentUpon>PrintPreviewDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPEEDDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPEEDDBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SPEEDDBVIEWDataSet.cs">
+      <DependentUpon>SPEEDDBVIEWDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EXCEL受注取込エラーリストCrystalReport.cs">
+      <DependentUpon>EXCEL受注取込エラーリストCrystalReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="オンライン発注リストCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>オンライン発注リストCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="monotaRO受注取込Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="monotaRO受注取込Template.Designer.cs">
+      <DependentUpon>monotaRO受注取込Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monotaRO受注取込Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="monotaRO受注取込Form.Designer.cs">
+      <DependentUpon>monotaRO受注取込Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monotaRO受注取込エラーリストCrystalReport.cs">
+      <DependentUpon>monotaRO受注取込エラーリストCrystalReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="バックオーダーリスト_商品順CrystalReport.cs">
+      <DependentUpon>バックオーダーリスト_商品順CrystalReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="仕入計上DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>仕入計上DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="仕入計上入力FunctionKeyAction.cs" />
+    <Compile Include="会社基本.cs" />
+    <Compile Include="伝票検索FunctionKeyAction.cs" />
+    <Compile Include="伝票検索Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="伝票検索Form.Designer.cs">
+      <DependentUpon>伝票検索Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="伝票検索_ヘッダTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="伝票検索_ヘッダTemplate.Designer.cs">
+      <DependentUpon>伝票検索_ヘッダTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="伝票検索右Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="伝票検索右Template.Designer.cs">
+      <DependentUpon>伝票検索右Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="伝票検索左Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="伝票検索左Template.Designer.cs">
+      <DependentUpon>伝票検索左Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="伝票検索計上Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="伝票検索計上Form.Designer.cs">
+      <DependentUpon>伝票検索計上Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="伝票検索計上FunctionKeyAction.cs" />
+    <Compile Include="伝票検索計上Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="伝票検索計上Template.Designer.cs">
+      <DependentUpon>伝票検索計上Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="伝票検索計上_ヘッダTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="伝票検索計上_ヘッダTemplate.Designer.cs">
+      <DependentUpon>伝票検索計上_ヘッダTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="伝票検索計上ヘッダDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>伝票検索計上ヘッダDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="伝票検索計上右Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="伝票検索計上右Template.Designer.cs">
+      <DependentUpon>伝票検索計上右Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="伝票検索計上左Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="伝票検索計上左Template.Designer.cs">
+      <DependentUpon>伝票検索計上左Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="伝票検索計上明細DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>伝票検索計上明細DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="受注入力_ドラスタ対応_明細Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="受注入力_ドラスタ対応_明細Form.Designer.cs">
+      <DependentUpon>受注入力_ドラスタ対応_明細Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kanaxs-1.0.0.cs" />
+    <Compile Include="SPEEDDBVIEWDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPEEDDBVIEWDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SPEEDDB管理DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPEEDDB管理DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="受注入力_ドラスタ対応_ヘッダForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="受注入力_ドラスタ対応_ヘッダForm.Designer.cs">
+      <DependentUpon>受注入力_ドラスタ対応_ヘッダForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注入力_ドラスタ対応_ヘッダTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="受注入力_ドラスタ対応_ヘッダTemplate.Designer.cs">
+      <DependentUpon>受注入力_ドラスタ対応_ヘッダTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注入力_ドラスタ対応_単価更新Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="受注入力_ドラスタ対応_単価更新Form.Designer.cs">
+      <DependentUpon>受注入力_ドラスタ対応_単価更新Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注入力_ドラスタ対応_単価更新Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="受注入力_ドラスタ対応_単価更新Template.Designer.cs">
+      <DependentUpon>受注入力_ドラスタ対応_単価更新Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注入力_ドラスタ対応_明細Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="受注入力_ドラスタ対応_明細Template.Designer.cs">
+      <DependentUpon>受注入力_ドラスタ対応_明細Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注残集計_得意先Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="受注残集計_得意先Form.Designer.cs">
+      <DependentUpon>受注残集計_得意先Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注残集計_得意先FunctionKeyAction.cs" />
+    <Compile Include="受注残集計_得意先Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="受注残集計_得意先Template.Designer.cs">
+      <DependentUpon>受注残集計_得意先Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注残集計_得意先内訳Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="受注残集計_得意先内訳Form.Designer.cs">
+      <DependentUpon>受注残集計_得意先内訳Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注残集計_得意先内訳Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="受注残集計_得意先内訳Template.Designer.cs">
+      <DependentUpon>受注残集計_得意先内訳Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注残集計_担当者Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="受注残集計_担当者Form.Designer.cs">
+      <DependentUpon>受注残集計_担当者Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注残集計_担当者FunctionKeyAction.cs" />
+    <Compile Include="受注残集計_担当者Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="受注残集計_担当者Template.Designer.cs">
+      <DependentUpon>受注残集計_担当者Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注残集計_担当者内訳Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="受注残集計_担当者内訳Form.Designer.cs">
+      <DependentUpon>受注残集計_担当者内訳Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注残集計_担当者内訳Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="受注残集計_担当者内訳Template.Designer.cs">
+      <DependentUpon>受注残集計_担当者内訳Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="商品別受注出荷履歴照会Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="商品別受注出荷履歴照会Form.Designer.cs">
+      <DependentUpon>商品別受注出荷履歴照会Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="商品別受注出荷履歴照会FunctionKeyAction.cs" />
+    <Compile Include="商品別受注出荷履歴照会Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="商品別受注出荷履歴照会Template.Designer.cs">
+      <DependentUpon>商品別受注出荷履歴照会Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="商品変換マスタメンテDataSet.cs">
+      <DependentUpon>商品変換マスタメンテDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="商品変換マスタメンテDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>商品変換マスタメンテDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="売上計上_ドラスタ対応_欠品理由Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="売上計上_ドラスタ対応_欠品理由Template.Designer.cs">
+      <DependentUpon>売上計上_ドラスタ対応_欠品理由Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="売上計上_ドラスタ対応_ヘッダForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="売上計上_ドラスタ対応_ヘッダForm.Designer.cs">
+      <DependentUpon>売上計上_ドラスタ対応_ヘッダForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="売上計上_ドラスタ対応_ヘッダTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="売上計上_ドラスタ対応_ヘッダTemplate.Designer.cs">
+      <DependentUpon>売上計上_ドラスタ対応_ヘッダTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="売上計上_ドラスタ対応_明細Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="売上計上_ドラスタ対応_明細Form.Designer.cs">
+      <DependentUpon>売上計上_ドラスタ対応_明細Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="売上計上_ドラスタ対応_明細Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="売上計上_ドラスタ対応_明細Template.Designer.cs">
+      <DependentUpon>売上計上_ドラスタ対応_明細Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="売上計上_ドラスタ対応_欠品理由Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="売上計上_ドラスタ対応_欠品理由Form.Designer.cs">
+      <DependentUpon>売上計上_ドラスタ対応_欠品理由Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="売上計上入力FunctionKeyAction.cs" />
+    <Compile Include="ドラスタ受注エラーリストCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ドラスタ受注エラーリストCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ドラスタ受注チェックリストCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ドラスタ受注チェックリストCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="仕入先検索FunctionKeyAction.cs" />
+    <Compile Include="伝票検索Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="伝票検索Template.Designer.cs">
+      <DependentUpon>伝票検索Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注入力FunctionKeyAction.cs" />
+    <Compile Include="売上計上DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>売上計上DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="得意先履歴単価コピーDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>得意先履歴単価コピーDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="得意先履歴単価更新Set.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>得意先履歴単価更新Set.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="得意先履歴単価更新リストCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>得意先履歴単価更新リストCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="得意先検索FunctionKeyAction.cs" />
+    <Compile Include="SqlDb.cs" />
+    <Compile Include="WK受注BファイルDataSet.cs">
+      <DependentUpon>WK受注BファイルDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WK受注BファイルDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WK受注BファイルDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WTEXCEL受注ファイルDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WTEXCEL受注ファイルDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WTドラスタ受注ファイルDataSet.cs">
+      <DependentUpon>WTドラスタ受注ファイルDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WTドラスタ受注ファイルDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WTドラスタ受注ファイルDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="オンライン発注リストTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="オンライン発注リストTemplate.Designer.cs">
+      <DependentUpon>オンライン発注リストTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="オンライン発注リストForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="オンライン発注リストForm.Designer.cs">
+      <DependentUpon>オンライン発注リストForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注ファイルDataSet.cs">
+      <DependentUpon>受注ファイルDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="発注データ作成CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>発注データ作成CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="発注入力FunctionKeyAction.cs" />
+    <Compile Include="仕入計上入力Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="仕入計上入力Form.Designer.cs">
+      <DependentUpon>仕入計上入力Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="仕入計上入力Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="仕入計上入力Template.Designer.cs">
+      <DependentUpon>仕入計上入力Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="売上計上入力Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="売上計上入力Form.designer.cs">
+      <DependentUpon>売上計上入力Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="売上計上入力Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="売上計上入力Template.designer.cs">
+      <DependentUpon>売上計上入力Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注入力DataSet.cs">
+      <DependentUpon>発注入力DataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="発注入力DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>発注入力DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="発注入力Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="発注入力Form.Designer.cs">
+      <DependentUpon>発注入力Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注入力Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="発注入力Template.Designer.cs">
+      <DependentUpon>発注入力Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注入力入力Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="受注入力入力Template.designer.cs">
+      <DependentUpon>受注入力入力Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注ファイルDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>受注ファイルDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="受注入力ヘッダTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="受注入力ヘッダTemplate.Designer.cs">
+      <DependentUpon>受注入力ヘッダTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注戻しファイルDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>受注戻しファイルDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="商品変換マスタメンテFunctionKeyAction.cs" />
+    <Compile Include="商品検索FunctionKeyAction.cs" />
+    <Compile Include="商品変換取込変換商品未登録CrystalReport.cs">
+      <DependentUpon>商品変換取込変換商品未登録CrystalReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="商品変換取込商品未登録CrystalReport.cs">
+      <DependentUpon>商品変換取込商品未登録CrystalReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="バックオーダーリストCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>バックオーダーリストCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="バックオーダーリストForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="バックオーダーリストForm.Designer.cs">
+      <DependentUpon>バックオーダーリストForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="バックオーダーリストFunctionKeyAction.cs" />
+    <Compile Include="バックオーダーリストNCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>バックオーダーリストNCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="バックオーダーリストTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="バックオーダーリストTemplate.Designer.cs">
+      <DependentUpon>バックオーダーリストTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="仕入先別発注残明細表FunctionKeyAction.cs" />
+    <Compile Include="仕入計上明細参照FunctionKeyAction.cs" />
+    <Compile Include="出荷可能一覧表FunctionKeyAction.cs" />
+    <Compile Include="受注明細参照FunctionKeyAction.cs" />
+    <Compile Include="受注残集計Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="受注残集計Form.Designer.cs">
+      <DependentUpon>受注残集計Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注残集計Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="受注残集計Template.Designer.cs">
+      <DependentUpon>受注残集計Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注残集計_商品Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="受注残集計_商品Form.Designer.cs">
+      <DependentUpon>受注残集計_商品Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注残集計_商品FunctionKeyAction.cs" />
+    <Compile Include="受注残集計_商品Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="受注残集計_商品Template.Designer.cs">
+      <DependentUpon>受注残集計_商品Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注残集計_商品別内訳Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="受注残集計_商品別内訳Form.Designer.cs">
+      <DependentUpon>受注残集計_商品別内訳Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注残集計_商品別内訳Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="受注残集計_商品別内訳Template.Designer.cs">
+      <DependentUpon>受注残集計_商品別内訳Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="商品変換取込変換商品登録済CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>商品変換取込変換商品登録済CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="新受注入力Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="新受注入力Form.Designer.cs">
+      <DependentUpon>新受注入力Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注ファイルDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>発注ファイルDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="発注戻しファイルDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>発注戻しファイルDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="発注書CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>発注書CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="発注書DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>発注書DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="発注残集計Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="発注残集計Form.Designer.cs">
+      <DependentUpon>発注残集計Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注残集計Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="発注残集計Template.Designer.cs">
+      <DependentUpon>発注残集計Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注残集計_仕入先Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="発注残集計_仕入先Form.Designer.cs">
+      <DependentUpon>発注残集計_仕入先Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注残集計_仕入先Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="発注残集計_仕入先Template.Designer.cs">
+      <DependentUpon>発注残集計_仕入先Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注残集計_仕入先内訳Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="発注残集計_仕入先内訳Form.Designer.cs">
+      <DependentUpon>発注残集計_仕入先内訳Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注残集計_仕入先内訳Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="発注残集計_仕入先内訳Template.Designer.cs">
+      <DependentUpon>発注残集計_仕入先内訳Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注残集計_商品Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="発注残集計_商品Form.Designer.cs">
+      <DependentUpon>発注残集計_商品Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注残集計_商品Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="発注残集計_商品Template.Designer.cs">
+      <DependentUpon>発注残集計_商品Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注残集計_商品別内訳Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="発注残集計_商品別内訳Form.Designer.cs">
+      <DependentUpon>発注残集計_商品別内訳Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注残集計_商品別内訳Template1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="発注残集計_商品別内訳Template1.Designer.cs">
+      <DependentUpon>発注残集計_商品別内訳Template1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注残集計_担当者Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="発注残集計_担当者Form.Designer.cs">
+      <DependentUpon>発注残集計_担当者Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注残集計_担当者Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="発注残集計_担当者Template.Designer.cs">
+      <DependentUpon>発注残集計_担当者Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注残集計_担当者内訳Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="発注残集計_担当者内訳Form.Designer.cs">
+      <DependentUpon>発注残集計_担当者内訳Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注残集計_担当者内訳Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="発注残集計_担当者内訳Template.Designer.cs">
+      <DependentUpon>発注残集計_担当者内訳Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="納品書CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>納品書CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="納品書DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>納品書DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="納品書Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="納品書Form.Designer.cs">
+      <DependentUpon>納品書Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="見積書CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>見積書CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="見積書newCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>見積書newCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ｍｙ見積書CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ｍｙ見積書CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="商品変換マスタメンテForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="商品変換マスタメンテForm.Designer.cs">
+      <DependentUpon>商品変換マスタメンテForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="商品変換マスタメンテTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="商品変換マスタメンテTemplate.Designer.cs">
+      <DependentUpon>商品変換マスタメンテTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="商品変換マスタ取込Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="商品変換マスタ取込Form.Designer.cs">
+      <DependentUpon>商品変換マスタ取込Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="商品変換マスタ取込Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="商品変換マスタ取込Template.Designer.cs">
+      <DependentUpon>商品変換マスタ取込Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="売上計上明細参照FunctionKeyAction.cs" />
+    <Compile Include="得意先別商品別掛率リストCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>得意先別商品別掛率リストCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="得意先別商品別掛率リストForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="得意先別商品別掛率リストForm.Designer.cs">
+      <DependentUpon>得意先別商品別掛率リストForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="得意先別商品別掛率リストFunctionKeyAction.cs" />
+    <Compile Include="得意先別商品別掛率リストTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="得意先別商品別掛率リストTemplate.Designer.cs">
+      <DependentUpon>得意先別商品別掛率リストTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="出荷可能一覧表Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="出荷可能一覧表Form.Designer.cs">
+      <DependentUpon>出荷可能一覧表Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="出荷可能一覧表Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="出荷可能一覧表Template.Designer.cs">
+      <DependentUpon>出荷可能一覧表Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="商品問合せFunctionKeyAction.cs" />
+    <Compile Include="SPEEDDB.cs">
+      <DependentUpon>SPEEDDB.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SPEEDDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPEEDDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SPEEDDBDataSet.cs">
+      <DependentUpon>SPEEDDBDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SPEEDDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPEEDDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SPEEDDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPEEDDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SPEEDDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPEEDDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="T商品マスタDataSet.cs">
+      <DependentUpon>T商品マスタDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="T商品マスタDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>T商品マスタDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
+    <Compile Include="W受注ファイルDataSet.cs">
+      <DependentUpon>W受注ファイルDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="プレビューForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="プレビューForm.Designer.cs">
+      <DependentUpon>プレビューForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="メニューForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="メニューForm.Designer.cs">
+      <DependentUpon>メニューForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="仕入先別商品別発注残問合せForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="仕入先別商品別発注残問合せForm.Designer.cs">
+      <DependentUpon>仕入先別商品別発注残問合せForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="仕入先別商品別発注残問合せFunctionKeyAction.cs" />
+    <Compile Include="仕入先別商品別発注残問合せTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="仕入先別商品別発注残問合せTemplate.Designer.cs">
+      <DependentUpon>仕入先別商品別発注残問合せTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="仕入先別発注残明細表CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>仕入先別発注残明細表CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="仕入先別発注残明細表Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="仕入先別発注残明細表Form.Designer.cs">
+      <DependentUpon>仕入先別発注残明細表Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="仕入先別発注残明細表Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="仕入先別発注残明細表Template.Designer.cs">
+      <DependentUpon>仕入先別発注残明細表Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="仕入先検索Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="仕入先検索Form.Designer.cs">
+      <DependentUpon>仕入先検索Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="仕入先検索Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="仕入先検索Template.Designer.cs">
+      <DependentUpon>仕入先検索Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="仕入計上明細参照Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="仕入計上明細参照Form.Designer.cs">
+      <DependentUpon>仕入計上明細参照Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="仕入計上明細参照Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="仕入計上明細参照Template.Designer.cs">
+      <DependentUpon>仕入計上明細参照Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="出荷可能一覧表_得意先順CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>出荷可能一覧表_得意先順CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="出荷指示一覧表CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>出荷指示一覧表CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="出荷指示一覧表Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="出荷指示一覧表Form.Designer.cs">
+      <DependentUpon>出荷指示一覧表Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="出荷指示一覧表FunctionKeyAction.cs" />
+    <Compile Include="出荷指示一覧表Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="出荷指示一覧表Template.Designer.cs">
+      <DependentUpon>出荷指示一覧表Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注入力Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="受注入力Form.designer.cs">
+      <DependentUpon>受注入力Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注入力Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="受注入力Template.designer.cs">
+      <DependentUpon>受注入力Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注入力明細Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="受注入力明細Template.designer.cs">
+      <DependentUpon>受注入力明細Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="W受注ファイルDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>W受注ファイルDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="受注明細参照Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="受注明細参照Form.Designer.cs">
+      <DependentUpon>受注明細参照Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="受注明細参照Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="受注明細参照Template.Designer.cs">
+      <DependentUpon>受注明細参照Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="商品問合せForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="商品問合せForm.Designer.cs">
+      <DependentUpon>商品問合せForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="商品問合せTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="商品問合せTemplate.Designer.cs">
+      <DependentUpon>商品問合せTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="商品検索Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="商品検索Form.Designer.cs">
+      <DependentUpon>商品検索Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="商品検索Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="商品検索Template.designer.cs">
+      <DependentUpon>商品検索Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="売上計上明細参照Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="売上計上明細参照Form.Designer.cs">
+      <DependentUpon>売上計上明細参照Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="売上計上明細参照Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="売上計上明細参照Template.Designer.cs">
+      <DependentUpon>売上計上明細参照Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="得意先別商品別受注残問合せForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="得意先別商品別受注残問合せForm.Designer.cs">
+      <DependentUpon>得意先別商品別受注残問合せForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="得意先別商品別受注残問合せTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="得意先別商品別受注残問合せTemplate.Designer.cs">
+      <DependentUpon>得意先別商品別受注残問合せTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="得意先別商品別受注残問合せFunctionKeyAction.cs" />
+    <Compile Include="得意先売上明細参照Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="得意先売上明細参照Form.Designer.cs">
+      <DependentUpon>得意先売上明細参照Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="得意先売上明細参照FunctionKeyAction.cs" />
+    <Compile Include="得意先売上明細参照Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="得意先売上明細参照Template.Designer.cs">
+      <DependentUpon>得意先売上明細参照Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="得意先履歴単価コピーForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="得意先履歴単価コピーForm.Designer.cs">
+      <DependentUpon>得意先履歴単価コピーForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="得意先履歴単価コピーTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="得意先履歴単価コピーTemplate.Designer.cs">
+      <DependentUpon>得意先履歴単価コピーTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="得意先履歴単価更新Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="得意先履歴単価更新Form.Designer.cs">
+      <DependentUpon>得意先履歴単価更新Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="得意先履歴単価更新Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="得意先履歴単価更新Template.Designer.cs">
+      <DependentUpon>得意先履歴単価更新Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="得意先検索Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="得意先検索Form.Designer.cs">
+      <DependentUpon>得意先検索Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="得意先検索Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="得意先検索Template.designer.cs">
+      <DependentUpon>得意先検索Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="出荷可能一覧表CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>出荷可能一覧表CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="発注データ作成Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="発注データ作成Form.Designer.cs">
+      <DependentUpon>発注データ作成Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注データ作成Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="発注データ作成Template.Designer.cs">
+      <DependentUpon>発注データ作成Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注書Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="発注書Form.Designer.cs">
+      <DependentUpon>発注書Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="発注書Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="発注書Template.Designer.cs">
+      <DependentUpon>発注書Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="納品書Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="納品書Template.Designer.cs">
+      <DependentUpon>納品書Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="見積書Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="見積書Form.Designer.cs">
+      <DependentUpon>見積書Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="見積書Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="見積書Template.Designer.cs">
+      <DependentUpon>見積書Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="適正在庫切れ一覧表CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>適正在庫切れ一覧表CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="適正在庫切れ一覧表Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="適正在庫切れ一覧表Form.Designer.cs">
+      <DependentUpon>適正在庫切れ一覧表Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="適正在庫切れ一覧表Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="適正在庫切れ一覧表Template.Designer.cs">
+      <DependentUpon>適正在庫切れ一覧表Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EOSドラスタ納品書発行Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EOSドラスタ納品書発行Template.Designer.cs">
+      <DependentUpon>EOSドラスタ納品書発行Template.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EOSドラスタ受注取込Form.resx">
+      <DependentUpon>EOSドラスタ受注取込Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EOSドラスタ受注取込Template.resx">
+      <DependentUpon>EOSドラスタ受注取込Template.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EOSドラスタ納品書発行Form.resx">
+      <DependentUpon>EOSドラスタ納品書発行Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EOSドラスタ送信データ作成CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EOSドラスタ送信データ作成CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EOSドラスタ送信データ作成Form.resx">
+      <DependentUpon>EOSドラスタ送信データ作成Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EOSドラスタ送信データ作成Template.resx">
+      <DependentUpon>EOSドラスタ送信データ作成Template.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EXCEL受注取込Form.resx">
+      <DependentUpon>EXCEL受注取込Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EXCEL受注取込Template.resx">
+      <DependentUpon>EXCEL受注取込Template.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EXCEL受注取込チェックリストCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EXCEL受注取込チェックリストCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EXCEL受注取込エラーリストCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EXCEL受注取込エラーリストCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaROオンライン発注リストForm.resx">
+      <DependentUpon>monotaROオンライン発注リストForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaROオンライン発注リストTemplate.resx">
+      <DependentUpon>monotaROオンライン発注リストTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaRO一括発注Form.resx">
+      <DependentUpon>monotaRO一括発注Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaRO一括発注Template.resx">
+      <DependentUpon>monotaRO一括発注Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaRO出荷指示一覧表Form.resx">
+      <DependentUpon>monotaRO出荷指示一覧表Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaRO出荷指示一覧表Template.resx">
+      <DependentUpon>monotaRO出荷指示一覧表Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaRO受注取込チェックリストCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>monotaRO受注取込チェックリストCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaRO受注問合せ入力Form.resx">
+      <DependentUpon>monotaRO受注問合せ入力Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaRO受注問合せ入力Template.resx">
+      <DependentUpon>monotaRO受注問合せ入力Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaRO回答データ作成Template.resx">
+      <DependentUpon>monotaRO回答データ作成Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaRO回答データ作成Form.resx">
+      <DependentUpon>monotaRO回答データ作成Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaRO売上データ作成Form.resx">
+      <DependentUpon>monotaRO売上データ作成Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaRO売上データ作成Template.resx">
+      <DependentUpon>monotaRO売上データ作成Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaRO得意先別商品別受注残問合せForm.resx">
+      <DependentUpon>monotaRO得意先別商品別受注残問合せForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaRO得意先別商品別受注残問合せTemplate.resx">
+      <DependentUpon>monotaRO得意先別商品別受注残問合せTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaRO発注送信データ作成Form.resx">
+      <DependentUpon>monotaRO発注送信データ作成Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaRO発注送信データ作成Template.resx">
+      <DependentUpon>monotaRO発注送信データ作成Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SelectOperatorDialog.resx">
+      <DependentUpon>SelectOperatorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\PrintPreviewDialog.resx">
+      <DependentUpon>PrintPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="オンライン発注リストCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>オンライン発注リストCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaRO受注取込Template.resx">
+      <DependentUpon>monotaRO受注取込Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaRO受注取込Form.resx">
+      <DependentUpon>monotaRO受注取込Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="monotaRO受注取込エラーリストCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>monotaRO受注取込エラーリストCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="バックオーダーリスト_商品順CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>バックオーダーリスト_商品順CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="伝票検索Form.resx">
+      <DependentUpon>伝票検索Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="伝票検索_ヘッダTemplate.resx">
+      <DependentUpon>伝票検索_ヘッダTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="伝票検索右Template.resx">
+      <DependentUpon>伝票検索右Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="伝票検索左Template.resx">
+      <DependentUpon>伝票検索左Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="伝票検索計上Form.resx">
+      <DependentUpon>伝票検索計上Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="伝票検索計上Template.resx">
+      <DependentUpon>伝票検索計上Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="伝票検索計上_ヘッダTemplate.resx">
+      <DependentUpon>伝票検索計上_ヘッダTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="伝票検索計上右Template.resx">
+      <DependentUpon>伝票検索計上右Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="伝票検索計上左Template.resx">
+      <DependentUpon>伝票検索計上左Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注入力_ドラスタ対応_明細Form.resx">
+      <DependentUpon>受注入力_ドラスタ対応_明細Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="オンライン発注リストTemplate.resx">
+      <DependentUpon>オンライン発注リストTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="オンライン発注リストForm.resx">
+      <DependentUpon>オンライン発注リストForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ドラスタ受注エラーリストCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ドラスタ受注エラーリストCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ドラスタ受注チェックリストCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ドラスタ受注チェックリストCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="仕入計上入力Form.resx">
+      <DependentUpon>仕入計上入力Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="仕入計上入力Template.resx">
+      <DependentUpon>仕入計上入力Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="伝票検索Template.resx">
+      <DependentUpon>伝票検索Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注入力_ドラスタ対応_ヘッダForm.resx">
+      <DependentUpon>受注入力_ドラスタ対応_ヘッダForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注入力_ドラスタ対応_ヘッダTemplate.resx">
+      <DependentUpon>受注入力_ドラスタ対応_ヘッダTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注入力_ドラスタ対応_単価更新Form.resx">
+      <DependentUpon>受注入力_ドラスタ対応_単価更新Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注入力_ドラスタ対応_単価更新Template.resx">
+      <DependentUpon>受注入力_ドラスタ対応_単価更新Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注入力_ドラスタ対応_明細Template.resx">
+      <DependentUpon>受注入力_ドラスタ対応_明細Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注残集計_得意先Form.resx">
+      <DependentUpon>受注残集計_得意先Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注残集計_得意先Template.resx">
+      <DependentUpon>受注残集計_得意先Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注残集計_得意先内訳Form.resx">
+      <DependentUpon>受注残集計_得意先内訳Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注残集計_得意先内訳Template.resx">
+      <DependentUpon>受注残集計_得意先内訳Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注残集計_担当者Form.resx">
+      <DependentUpon>受注残集計_担当者Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注残集計_担当者Template.resx">
+      <DependentUpon>受注残集計_担当者Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注残集計_担当者内訳Form.resx">
+      <DependentUpon>受注残集計_担当者内訳Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注残集計_担当者内訳Template.resx">
+      <DependentUpon>受注残集計_担当者内訳Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="商品別受注出荷履歴照会Form.resx">
+      <DependentUpon>商品別受注出荷履歴照会Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="商品別受注出荷履歴照会Template.resx">
+      <DependentUpon>商品別受注出荷履歴照会Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="売上計上_ドラスタ対応_欠品理由Template.resx">
+      <DependentUpon>売上計上_ドラスタ対応_欠品理由Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="売上計上_ドラスタ対応_ヘッダForm.resx">
+      <DependentUpon>売上計上_ドラスタ対応_ヘッダForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="売上計上_ドラスタ対応_ヘッダTemplate.resx">
+      <DependentUpon>売上計上_ドラスタ対応_ヘッダTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="売上計上_ドラスタ対応_明細Form.resx">
+      <DependentUpon>売上計上_ドラスタ対応_明細Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="売上計上_ドラスタ対応_明細Template.resx">
+      <DependentUpon>売上計上_ドラスタ対応_明細Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="売上計上_ドラスタ対応_欠品理由Form.resx">
+      <DependentUpon>売上計上_ドラスタ対応_欠品理由Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="売上計上入力Form.resx">
+      <DependentUpon>売上計上入力Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="売上計上入力Template.resx">
+      <DependentUpon>売上計上入力Template.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="得意先履歴単価更新リストCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>得意先履歴単価更新リストCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注データ作成CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>発注データ作成CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注入力Form.resx">
+      <DependentUpon>発注入力Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注入力Template.resx">
+      <DependentUpon>発注入力Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注入力入力Template.resx">
+      <DependentUpon>受注入力入力Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注入力ヘッダTemplate.resx">
+      <DependentUpon>受注入力ヘッダTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="商品変換取込変換商品未登録CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>商品変換取込変換商品未登録CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="商品変換取込商品未登録CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>商品変換取込商品未登録CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="バックオーダーリストCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>バックオーダーリストCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="バックオーダーリストForm.resx">
+      <DependentUpon>バックオーダーリストForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="バックオーダーリストNCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>バックオーダーリストNCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="バックオーダーリストTemplate.resx">
+      <DependentUpon>バックオーダーリストTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注残集計Form.resx">
+      <DependentUpon>受注残集計Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注残集計Template.resx">
+      <DependentUpon>受注残集計Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注残集計_商品Form.resx">
+      <DependentUpon>受注残集計_商品Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注残集計_商品Template.resx">
+      <DependentUpon>受注残集計_商品Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注残集計_商品別内訳Form.resx">
+      <DependentUpon>受注残集計_商品別内訳Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注残集計_商品別内訳Template.resx">
+      <DependentUpon>受注残集計_商品別内訳Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="商品変換取込変換商品登録済CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>商品変換取込変換商品登録済CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="新受注入力Form.resx">
+      <DependentUpon>新受注入力Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注書CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>発注書CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注残集計Form.resx">
+      <DependentUpon>発注残集計Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注残集計Template.resx">
+      <DependentUpon>発注残集計Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注残集計_仕入先Form.resx">
+      <DependentUpon>発注残集計_仕入先Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注残集計_仕入先Template.resx">
+      <DependentUpon>発注残集計_仕入先Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注残集計_仕入先内訳Form.resx">
+      <DependentUpon>発注残集計_仕入先内訳Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注残集計_仕入先内訳Template.resx">
+      <DependentUpon>発注残集計_仕入先内訳Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注残集計_商品Form.resx">
+      <DependentUpon>発注残集計_商品Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注残集計_商品Template.resx">
+      <DependentUpon>発注残集計_商品Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注残集計_商品別内訳Form.resx">
+      <DependentUpon>発注残集計_商品別内訳Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注残集計_商品別内訳Template1.resx">
+      <DependentUpon>発注残集計_商品別内訳Template1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注残集計_担当者Form.resx">
+      <DependentUpon>発注残集計_担当者Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注残集計_担当者Template.resx">
+      <DependentUpon>発注残集計_担当者Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注残集計_担当者内訳Form.resx">
+      <DependentUpon>発注残集計_担当者内訳Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注残集計_担当者内訳Template.resx">
+      <DependentUpon>発注残集計_担当者内訳Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="納品書CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>納品書CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="納品書Form.resx">
+      <DependentUpon>納品書Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="見積書CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>見積書CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="見積書newCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>見積書newCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ｍｙ見積書CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ｍｙ見積書CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="商品変換マスタメンテForm.resx">
+      <DependentUpon>商品変換マスタメンテForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="商品変換マスタメンテTemplate.resx">
+      <DependentUpon>商品変換マスタメンテTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="商品変換マスタ取込Form.resx">
+      <DependentUpon>商品変換マスタ取込Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="商品変換マスタ取込Template.resx">
+      <DependentUpon>商品変換マスタ取込Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="得意先別商品別掛率リストCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>得意先別商品別掛率リストCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="得意先別商品別掛率リストForm.resx">
+      <DependentUpon>得意先別商品別掛率リストForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="得意先別商品別掛率リストTemplate.resx">
+      <DependentUpon>得意先別商品別掛率リストTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="プレビューForm.resx">
+      <DependentUpon>プレビューForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="メニューForm.resx">
+      <DependentUpon>メニューForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="仕入先別商品別発注残問合せForm.resx">
+      <DependentUpon>仕入先別商品別発注残問合せForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="仕入先別商品別発注残問合せTemplate.resx">
+      <DependentUpon>仕入先別商品別発注残問合せTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="仕入先別発注残明細表CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>仕入先別発注残明細表CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="仕入先別発注残明細表Form.resx">
+      <DependentUpon>仕入先別発注残明細表Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="仕入先別発注残明細表Template.resx">
+      <DependentUpon>仕入先別発注残明細表Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="仕入先検索Form.resx">
+      <DependentUpon>仕入先検索Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="仕入先検索Template.resx">
+      <DependentUpon>仕入先検索Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="仕入計上明細参照Form.resx">
+      <DependentUpon>仕入計上明細参照Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="仕入計上明細参照Template.resx">
+      <DependentUpon>仕入計上明細参照Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="出荷可能一覧表Form.resx">
+      <DependentUpon>出荷可能一覧表Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="出荷可能一覧表Template.resx">
+      <DependentUpon>出荷可能一覧表Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="出荷可能一覧表_得意先順CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>出荷可能一覧表_得意先順CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="出荷指示一覧表CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>出荷指示一覧表CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="出荷指示一覧表Form.resx">
+      <DependentUpon>出荷指示一覧表Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="出荷指示一覧表Template.resx">
+      <DependentUpon>出荷指示一覧表Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注入力Form.resx">
+      <DependentUpon>受注入力Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注入力Template.resx">
+      <DependentUpon>受注入力Template.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注入力明細Template.resx">
+      <DependentUpon>受注入力明細Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注明細参照Form.resx">
+      <DependentUpon>受注明細参照Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="受注明細参照Template.resx">
+      <DependentUpon>受注明細参照Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="商品問合せForm.resx">
+      <DependentUpon>商品問合せForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="商品問合せTemplate.resx">
+      <DependentUpon>商品問合せTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="商品検索Form.resx">
+      <DependentUpon>商品検索Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="商品検索Template.resx">
+      <DependentUpon>商品検索Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="売上計上明細参照Form.resx">
+      <DependentUpon>売上計上明細参照Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="売上計上明細参照Template.resx">
+      <DependentUpon>売上計上明細参照Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="得意先別商品別受注残問合せForm.resx">
+      <DependentUpon>得意先別商品別受注残問合せForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="得意先別商品別受注残問合せTemplate.resx">
+      <DependentUpon>得意先別商品別受注残問合せTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="得意先売上明細参照Form.resx">
+      <DependentUpon>得意先売上明細参照Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="得意先売上明細参照Template.resx">
+      <DependentUpon>得意先売上明細参照Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="得意先履歴単価コピーForm.resx">
+      <DependentUpon>得意先履歴単価コピーForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="得意先履歴単価コピーTemplate.resx">
+      <DependentUpon>得意先履歴単価コピーTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="得意先履歴単価更新Form.resx">
+      <DependentUpon>得意先履歴単価更新Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="得意先履歴単価更新Template.resx">
+      <DependentUpon>得意先履歴単価更新Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="得意先検索Form.resx">
+      <DependentUpon>得意先検索Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="得意先検索Template.resx">
+      <DependentUpon>得意先検索Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="出荷可能一覧表CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>出荷可能一覧表CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注データ作成Form.resx">
+      <DependentUpon>発注データ作成Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注データ作成Template.resx">
+      <DependentUpon>発注データ作成Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注書Form.resx">
+      <DependentUpon>発注書Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="発注書Template.resx">
+      <DependentUpon>発注書Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="納品書Template.resx">
+      <DependentUpon>納品書Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="見積書Form.resx">
+      <DependentUpon>見積書Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="見積書Template.resx">
+      <DependentUpon>見積書Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="適正在庫切れ一覧表CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>適正在庫切れ一覧表CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="適正在庫切れ一覧表Form.resx">
+      <DependentUpon>適正在庫切れ一覧表Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="適正在庫切れ一覧表Template.resx">
+      <DependentUpon>適正在庫切れ一覧表Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EOSドラスタ納品書発行Template.resx">
+      <DependentUpon>EOSドラスタ納品書発行Template.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="ClassDiagram5.cd" />
+    <None Include="db_test_TemporaryKey.pfx" />
+    <None Include="EOSドラスタ送信データ作成DataSet.xsc">
+      <DependentUpon>EOSドラスタ送信データ作成DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EOSドラスタ送信データ作成DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EOSドラスタ送信データ作成DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EOSドラスタ送信データ作成DataSet.xss">
+      <DependentUpon>EOSドラスタ送信データ作成DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="monotaRO一括発注DataSet.xsc">
+      <DependentUpon>monotaRO一括発注DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="monotaRO一括発注DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>monotaRO一括発注DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="monotaRO一括発注DataSet.xss">
+      <DependentUpon>monotaRO一括発注DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="monotaRO受注取込DataSet.xsc">
+      <DependentUpon>monotaRO受注取込DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="monotaRO受注取込DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>monotaRO受注取込DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="monotaRO受注取込DataSet.xss">
+      <DependentUpon>monotaRO受注取込DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SPEEDDB.xsc">
+      <DependentUpon>SPEEDDB.xsd</DependentUpon>
+    </None>
+    <None Include="SPEEDDB.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SPEEDDB.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SPEEDDB.xss">
+      <DependentUpon>SPEEDDB.xsd</DependentUpon>
+    </None>
+    <None Include="SPEEDDBDataSet.xsc">
+      <DependentUpon>SPEEDDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SPEEDDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SPEEDDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SPEEDDBDataSet.xss">
+      <DependentUpon>SPEEDDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SPEEDDBDataSet1.xsc">
+      <DependentUpon>SPEEDDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SPEEDDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SPEEDDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SPEEDDBDataSet1.xss">
+      <DependentUpon>SPEEDDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SPEEDDBDataSet2.xsc">
+      <DependentUpon>SPEEDDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SPEEDDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SPEEDDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SPEEDDBDataSet2.xss">
+      <DependentUpon>SPEEDDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SPEEDDBDataSet3.xsc">
+      <DependentUpon>SPEEDDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SPEEDDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SPEEDDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SPEEDDBDataSet3.xss">
+      <DependentUpon>SPEEDDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SPEEDDBVIEWDataSet.xsc">
+      <DependentUpon>SPEEDDBVIEWDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SPEEDDBVIEWDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SPEEDDBVIEWDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SPEEDDBVIEWDataSet.xss">
+      <DependentUpon>SPEEDDBVIEWDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SPEEDDB管理DataSet.xsc">
+      <DependentUpon>SPEEDDB管理DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SPEEDDB管理DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SPEEDDB管理DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SPEEDDB管理DataSet.xss">
+      <DependentUpon>SPEEDDB管理DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="T商品マスタDataSet.xsc">
+      <DependentUpon>T商品マスタDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="T商品マスタDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>T商品マスタDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="T商品マスタDataSet.xss">
+      <DependentUpon>T商品マスタDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WK受注BファイルDataSet.xsc">
+      <DependentUpon>WK受注BファイルDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WK受注BファイルDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WK受注BファイルDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WK受注BファイルDataSet.xss">
+      <DependentUpon>WK受注BファイルDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WTEXCEL受注ファイルDataSet.xsc">
+      <DependentUpon>WTEXCEL受注ファイルDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WTEXCEL受注ファイルDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WTEXCEL受注ファイルDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WTEXCEL受注ファイルDataSet.xss">
+      <DependentUpon>WTEXCEL受注ファイルDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WTドラスタ受注ファイルDataSet.xsc">
+      <DependentUpon>WTドラスタ受注ファイルDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WTドラスタ受注ファイルDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WTドラスタ受注ファイルDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WTドラスタ受注ファイルDataSet.xss">
+      <DependentUpon>WTドラスタ受注ファイルDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="W受注ファイルDataSet.xsc">
+      <DependentUpon>W受注ファイルDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="W受注ファイルDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>W受注ファイルDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="W受注ファイルDataSet.xss">
+      <DependentUpon>W受注ファイルDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="仕入計上DataSet.xsc">
+      <DependentUpon>仕入計上DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="仕入計上DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>仕入計上DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="仕入計上DataSet.xss">
+      <DependentUpon>仕入計上DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="伝票検索計上ヘッダDataSet.xsc">
+      <DependentUpon>伝票検索計上ヘッダDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="伝票検索計上ヘッダDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>伝票検索計上ヘッダDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="伝票検索計上ヘッダDataSet.xss">
+      <DependentUpon>伝票検索計上ヘッダDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="伝票検索計上明細DataSet.xsc">
+      <DependentUpon>伝票検索計上明細DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="伝票検索計上明細DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>伝票検索計上明細DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="伝票検索計上明細DataSet.xss">
+      <DependentUpon>伝票検索計上明細DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="受注ファイルDataSet.xsc">
+      <DependentUpon>受注ファイルDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="受注ファイルDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>受注ファイルDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="受注ファイルDataSet.xss">
+      <DependentUpon>受注ファイルDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="受注戻しファイルDataSet.xsc">
+      <DependentUpon>受注戻しファイルDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="受注戻しファイルDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>受注戻しファイルDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="受注戻しファイルDataSet.xss">
+      <DependentUpon>受注戻しファイルDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="商品変換マスタメンテDataSet.xsc">
+      <DependentUpon>商品変換マスタメンテDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="商品変換マスタメンテDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>商品変換マスタメンテDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="商品変換マスタメンテDataSet.xss">
+      <DependentUpon>商品変換マスタメンテDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="売上計上DataSet.xsc">
+      <DependentUpon>売上計上DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="売上計上DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>売上計上DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="売上計上DataSet.xss">
+      <DependentUpon>売上計上DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="得意先履歴単価コピーDataSet.xsc">
+      <DependentUpon>得意先履歴単価コピーDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="得意先履歴単価コピーDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>得意先履歴単価コピーDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="得意先履歴単価コピーDataSet.xss">
+      <DependentUpon>得意先履歴単価コピーDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="得意先履歴単価更新Set.xsc">
+      <DependentUpon>得意先履歴単価更新Set.xsd</DependentUpon>
+    </None>
+    <None Include="得意先履歴単価更新Set.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>得意先履歴単価更新Set.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="得意先履歴単価更新Set.xss">
+      <DependentUpon>得意先履歴単価更新Set.xsd</DependentUpon>
+    </None>
+    <None Include="発注ファイルDataSet.xsc">
+      <DependentUpon>発注ファイルDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="発注ファイルDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>発注ファイルDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="発注ファイルDataSet.xss">
+      <DependentUpon>発注ファイルDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="発注入力DataSet.xsc">
+      <DependentUpon>発注入力DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="発注入力DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>発注入力DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="発注入力DataSet.xss">
+      <DependentUpon>発注入力DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="発注戻しファイルDataSet.xsc">
+      <DependentUpon>発注戻しファイルDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="発注戻しファイルDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>発注戻しファイルDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="発注戻しファイルDataSet.xss">
+      <DependentUpon>発注戻しファイルDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="発注書DataSet.xsc">
+      <DependentUpon>発注書DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="発注書DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>発注書DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="発注書DataSet.xss">
+      <DependentUpon>発注書DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="納品書DataSet.xsc">
+      <DependentUpon>納品書DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="納品書DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>納品書DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="納品書DataSet.xss">
+      <DependentUpon>納品書DataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラー 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroBrokerLib">
+      <Guid>{41738EEA-442F-477F-92CF-2889BD6CD7E7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalAnalysisCommLayerLib">
+      <Guid>{AAA3345B-2177-4D19-8D75-21688FE36251}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalAnalysisCommonControlsLib">
+      <Guid>{E377F909-BCFE-4E8E-B17C-8B1CBC7C7243}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalClientDocLib">
+      <Guid>{A8E20FDA-4A89-4545-8DFF-EBFA68E8C0F9}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalPrintControlLib">
+      <Guid>{62862E3F-F35B-455E-9459-49EAADE80A25}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportsCommonObjectModelLib">
+      <Guid>{FDB9B69E-BA79-4B13-9E96-8373AF162AEA}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportsControllersLib">
+      <Guid>{FA810FF5-70DA-4F98-A5E3-387D9577EF24}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportsCubeDefModelLib">
+      <Guid>{44AD71D4-4905-491D-B179-B5D91EB57374}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportsDataDefModelLib">
+      <Guid>{9B2F3E7B-8D45-47E8-95D3-3A9C1B22437F}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportsReportDefModelLib">
+      <Guid>{BF40B97D-06EA-4AB1-91DE-18CB29A2B25A}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Menu\MainMenuCategory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\MainMenuControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\MainMenuDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

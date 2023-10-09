@@ -1,0 +1,37 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="db_test.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="EOSDORASTAJYUTYUDIR" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\OBIC\受注ファイル\</Value>
+    </Setting>
+    <Setting Name="EOSDORASTAJYUTYUFILE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\OBIC\受注ファイル\</Value>
+    </Setting>
+    <Setting Name="EXCEL受注取込ファイル" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\OBIC7S4\EXCEL受注取込\EXCEL受注取込元データ.xls</Value>
+    </Setting>
+    <Setting Name="EOSドラスタ受注取込ファイル" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\OBIC\受注ファイル\受信20160112-14E.csv</Value>
+    </Setting>
+    <Setting Name="monotaRO受注取込フォルダ" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\OBIC7S4\monotaRO\受注取込\</Value>
+    </Setting>
+    <Setting Name="SPEEDDBConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.1.106;Initial Catalog=SPEEDDB;User Id=goda;Password=goda&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.1.106;Initial Catalog=SPEEDDB;User Id=goda;Password=goda</Value>
+    </Setting>
+    <Setting Name="ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Dsn=SPEEDDB;uid=goda;pwd=goda&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.Odbc&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Dsn=SPEEDDB;uid=goda;pwd=goda</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

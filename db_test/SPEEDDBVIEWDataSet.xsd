@@ -1,0 +1,1523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SPEEDDBVIEWDataSet" targetNamespace="http://tempuri.org/SPEEDDBVIEWDataSet.xsd" xmlns:mstns="http://tempuri.org/SPEEDDBVIEWDataSet.xsd" xmlns="http://tempuri.org/SPEEDDBVIEWDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SPEEDDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SPEEDDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.db_test.Properties.Settings.GlobalReference.Default.SPEEDDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_ON_CheckSeikyuTableAdapter" GeneratorDataComponentClassName="vw_ON_CheckSeikyuTableAdapter" Name="vw_ON_CheckSeikyu" UserDataComponentName="vw_ON_CheckSeikyuTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SPEEDDBConnectionString (Settings)" DbObjectName="SPEEDDB.dbo.vw_ON_CheckSeikyu" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 処理番号, 処理名, 入力区分, 伝票番号, [売上／入金日], 最終請求年月日 FROM dbo.vw_ON_CheckSeikyu</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="処理番号" DataSetColumn="処理番号" />
+              <Mapping SourceColumn="処理名" DataSetColumn="処理名" />
+              <Mapping SourceColumn="入力区分" DataSetColumn="入力区分" />
+              <Mapping SourceColumn="伝票番号" DataSetColumn="伝票番号" />
+              <Mapping SourceColumn="売上／入金日" DataSetColumn="売上／入金日" />
+              <Mapping SourceColumn="最終請求年月日" DataSetColumn="最終請求年月日" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_ON_CheckShiharaiTableAdapter" GeneratorDataComponentClassName="vw_ON_CheckShiharaiTableAdapter" Name="vw_ON_CheckShiharai" UserDataComponentName="vw_ON_CheckShiharaiTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SPEEDDBConnectionString (Settings)" DbObjectName="SPEEDDB.dbo.vw_ON_CheckShiharai" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 処理番号, 処理名, 入力区分, 伝票番号, [仕入／支払日], 最終支払年月日 FROM dbo.vw_ON_CheckShiharai</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="処理番号" DataSetColumn="処理番号" />
+              <Mapping SourceColumn="処理名" DataSetColumn="処理名" />
+              <Mapping SourceColumn="入力区分" DataSetColumn="入力区分" />
+              <Mapping SourceColumn="伝票番号" DataSetColumn="伝票番号" />
+              <Mapping SourceColumn="仕入／支払日" DataSetColumn="仕入／支払日" />
+              <Mapping SourceColumn="最終支払年月日" DataSetColumn="最終支払年月日" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_Ryakumei_SirTableAdapter" GeneratorDataComponentClassName="vw_Ryakumei_SirTableAdapter" Name="vw_Ryakumei_Sir" UserDataComponentName="vw_Ryakumei_SirTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SPEEDDBConnectionString (Settings)" DbObjectName="SPEEDDB.dbo.vw_Ryakumei_Sir" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT SirCD, SirName FROM dbo.vw_Ryakumei_Sir</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SirCD" DataSetColumn="SirCD" />
+              <Mapping SourceColumn="SirName" DataSetColumn="SirName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_Ryakumei_TokTableAdapter" GeneratorDataComponentClassName="vw_Ryakumei_TokTableAdapter" Name="vw_Ryakumei_Tok" UserDataComponentName="vw_Ryakumei_TokTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SPEEDDBConnectionString (Settings)" DbObjectName="SPEEDDB.dbo.vw_Ryakumei_Tok" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TokCD, TokName, TanCD FROM dbo.vw_Ryakumei_Tok</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TokCD" DataSetColumn="TokCD" />
+              <Mapping SourceColumn="TokName" DataSetColumn="TokName" />
+              <Mapping SourceColumn="TanCD" DataSetColumn="TanCD" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_ShohinTableAdapter" GeneratorDataComponentClassName="vw_ShohinTableAdapter" Name="vw_Shohin" UserDataComponentName="vw_ShohinTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SPEEDDBConnectionString (Settings)" DbObjectName="SPEEDDB.dbo.vw_Shohin" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 商品コード, 商品名, 規格, 形式寸法, 材質, 分類, 入数, 単位コード, 主要仕入先, 品種コード, メーカーコード, 在庫管理区分, 諸口区分, 規格諸口区分, 定価, 単価, 原価単価, 評価単価, 外内税区分, 消費税率, 新消費税率, 新消費税適用, ランク１単価, ランク２単価, ランク３単価, ランク４単価, ランク５単価, セット区分, 予備仕入先, メーカー品番, 車種, 棚番, 倉庫コード, 商品注意事項, 代表納品掛率, 代表原価掛率, 受注残数, 発注残数, 現在在庫数, 適正在庫, 前年４月売上数量, 前年５月売上数量, 前年６月売上数量, 前年７月売上数量, 前年８月売上数量, 前年９月売上数量, 前年１０月売上数量, 前年１１月売上数量, 前年１２月売上数量, 前年１月売上数量, 前年２月売上数量, 前年３月売上数量, 当年４月売上数量, 当年５月売上数量, 当年６月売上数量, 当年７月売上数量, 当年８月売上数量, 当年９月売上数量, 当年１０月売上数量, 当年１１月売上数量, 当年１２月売上数量, 当年１月売上数量, 当年２月売上数量, 当年３月売上数量, 翌年４月売上数量, 翌年５月売上数量, 翌年６月売上数量, 主要仕入先ＲＲ, 予備仕入先ＲＲ FROM dbo.vw_Shohin</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="商品コード" DataSetColumn="商品コード" />
+              <Mapping SourceColumn="商品名" DataSetColumn="商品名" />
+              <Mapping SourceColumn="規格" DataSetColumn="規格" />
+              <Mapping SourceColumn="形式寸法" DataSetColumn="形式寸法" />
+              <Mapping SourceColumn="材質" DataSetColumn="材質" />
+              <Mapping SourceColumn="分類" DataSetColumn="分類" />
+              <Mapping SourceColumn="入数" DataSetColumn="入数" />
+              <Mapping SourceColumn="単位コード" DataSetColumn="単位コード" />
+              <Mapping SourceColumn="主要仕入先" DataSetColumn="主要仕入先" />
+              <Mapping SourceColumn="品種コード" DataSetColumn="品種コード" />
+              <Mapping SourceColumn="メーカーコード" DataSetColumn="メーカーコード" />
+              <Mapping SourceColumn="在庫管理区分" DataSetColumn="在庫管理区分" />
+              <Mapping SourceColumn="諸口区分" DataSetColumn="諸口区分" />
+              <Mapping SourceColumn="規格諸口区分" DataSetColumn="規格諸口区分" />
+              <Mapping SourceColumn="定価" DataSetColumn="定価" />
+              <Mapping SourceColumn="単価" DataSetColumn="単価" />
+              <Mapping SourceColumn="原価単価" DataSetColumn="原価単価" />
+              <Mapping SourceColumn="評価単価" DataSetColumn="評価単価" />
+              <Mapping SourceColumn="外内税区分" DataSetColumn="外内税区分" />
+              <Mapping SourceColumn="消費税率" DataSetColumn="消費税率" />
+              <Mapping SourceColumn="新消費税率" DataSetColumn="新消費税率" />
+              <Mapping SourceColumn="新消費税適用" DataSetColumn="新消費税適用" />
+              <Mapping SourceColumn="ランク１単価" DataSetColumn="ランク１単価" />
+              <Mapping SourceColumn="ランク２単価" DataSetColumn="ランク２単価" />
+              <Mapping SourceColumn="ランク３単価" DataSetColumn="ランク３単価" />
+              <Mapping SourceColumn="ランク４単価" DataSetColumn="ランク４単価" />
+              <Mapping SourceColumn="ランク５単価" DataSetColumn="ランク５単価" />
+              <Mapping SourceColumn="セット区分" DataSetColumn="セット区分" />
+              <Mapping SourceColumn="予備仕入先" DataSetColumn="予備仕入先" />
+              <Mapping SourceColumn="メーカー品番" DataSetColumn="メーカー品番" />
+              <Mapping SourceColumn="車種" DataSetColumn="車種" />
+              <Mapping SourceColumn="棚番" DataSetColumn="棚番" />
+              <Mapping SourceColumn="倉庫コード" DataSetColumn="倉庫コード" />
+              <Mapping SourceColumn="商品注意事項" DataSetColumn="商品注意事項" />
+              <Mapping SourceColumn="代表納品掛率" DataSetColumn="代表納品掛率" />
+              <Mapping SourceColumn="代表原価掛率" DataSetColumn="代表原価掛率" />
+              <Mapping SourceColumn="受注残数" DataSetColumn="受注残数" />
+              <Mapping SourceColumn="発注残数" DataSetColumn="発注残数" />
+              <Mapping SourceColumn="現在在庫数" DataSetColumn="現在在庫数" />
+              <Mapping SourceColumn="適正在庫" DataSetColumn="適正在庫" />
+              <Mapping SourceColumn="前年４月売上数量" DataSetColumn="前年４月売上数量" />
+              <Mapping SourceColumn="前年５月売上数量" DataSetColumn="前年５月売上数量" />
+              <Mapping SourceColumn="前年６月売上数量" DataSetColumn="前年６月売上数量" />
+              <Mapping SourceColumn="前年７月売上数量" DataSetColumn="前年７月売上数量" />
+              <Mapping SourceColumn="前年８月売上数量" DataSetColumn="前年８月売上数量" />
+              <Mapping SourceColumn="前年９月売上数量" DataSetColumn="前年９月売上数量" />
+              <Mapping SourceColumn="前年１０月売上数量" DataSetColumn="前年１０月売上数量" />
+              <Mapping SourceColumn="前年１１月売上数量" DataSetColumn="前年１１月売上数量" />
+              <Mapping SourceColumn="前年１２月売上数量" DataSetColumn="前年１２月売上数量" />
+              <Mapping SourceColumn="前年１月売上数量" DataSetColumn="前年１月売上数量" />
+              <Mapping SourceColumn="前年２月売上数量" DataSetColumn="前年２月売上数量" />
+              <Mapping SourceColumn="前年３月売上数量" DataSetColumn="前年３月売上数量" />
+              <Mapping SourceColumn="当年４月売上数量" DataSetColumn="当年４月売上数量" />
+              <Mapping SourceColumn="当年５月売上数量" DataSetColumn="当年５月売上数量" />
+              <Mapping SourceColumn="当年６月売上数量" DataSetColumn="当年６月売上数量" />
+              <Mapping SourceColumn="当年７月売上数量" DataSetColumn="当年７月売上数量" />
+              <Mapping SourceColumn="当年８月売上数量" DataSetColumn="当年８月売上数量" />
+              <Mapping SourceColumn="当年９月売上数量" DataSetColumn="当年９月売上数量" />
+              <Mapping SourceColumn="当年１０月売上数量" DataSetColumn="当年１０月売上数量" />
+              <Mapping SourceColumn="当年１１月売上数量" DataSetColumn="当年１１月売上数量" />
+              <Mapping SourceColumn="当年１２月売上数量" DataSetColumn="当年１２月売上数量" />
+              <Mapping SourceColumn="当年１月売上数量" DataSetColumn="当年１月売上数量" />
+              <Mapping SourceColumn="当年２月売上数量" DataSetColumn="当年２月売上数量" />
+              <Mapping SourceColumn="当年３月売上数量" DataSetColumn="当年３月売上数量" />
+              <Mapping SourceColumn="翌年４月売上数量" DataSetColumn="翌年４月売上数量" />
+              <Mapping SourceColumn="翌年５月売上数量" DataSetColumn="翌年５月売上数量" />
+              <Mapping SourceColumn="翌年６月売上数量" DataSetColumn="翌年６月売上数量" />
+              <Mapping SourceColumn="主要仕入先ＲＲ" DataSetColumn="主要仕入先ＲＲ" />
+              <Mapping SourceColumn="予備仕入先ＲＲ" DataSetColumn="予備仕入先ＲＲ" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="SPEEDDBConnectionString (Settings)" DbObjectName="SPEEDDB.dbo.vw_Shohin" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy商品コード" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy商品コード" GeneratorSourceName="FillBy商品コード" GetMethodModifier="Public" GetMethodName="GetDataBy商品コード" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy商品コード" UserSourceName="FillBy商品コード">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT            商品コード, 商品名, 規格, 形式寸法, 材質, 分類, 入数, 単位コード, 主要仕入先, 品種コード, メーカーコード, 在庫管理区分, 諸口区分, 規格諸口区分, 定価, 単価, 原価単価, 
+                        評価単価, 外内税区分, 消費税率, 新消費税率, 新消費税適用, ランク１単価, ランク２単価, ランク３単価, ランク４単価, ランク５単価, セット区分, 予備仕入先, 
+                        メーカー品番, 車種, 棚番, 倉庫コード, 商品注意事項, 代表納品掛率, 代表原価掛率, 受注残数, 発注残数, 現在在庫数, 適正在庫, 前年４月売上数量, 前年５月売上数量, 
+                        前年６月売上数量, 前年７月売上数量, 前年８月売上数量, 前年９月売上数量, 前年１０月売上数量, 前年１１月売上数量, 前年１２月売上数量, 前年１月売上数量, 
+                        前年２月売上数量, 前年３月売上数量, 当年４月売上数量, 当年５月売上数量, 当年６月売上数量, 当年７月売上数量, 当年８月売上数量, 当年９月売上数量, 
+                        当年１０月売上数量, 当年１１月売上数量, 当年１２月売上数量, 当年１月売上数量, 当年２月売上数量, 当年３月売上数量, 翌年４月売上数量, 翌年５月売上数量, 
+                        翌年６月売上数量, 主要仕入先ＲＲ, 予備仕入先ＲＲ
+FROM              vw_Shohin
+WHERE             (商品コード = @商品コード)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="商品コード" ColumnName="商品コード" DataSourceName="SPEEDDB.dbo.vw_Shohin" DataTypeServer="varchar(13)" DbType="AnsiString" Direction="Input" ParameterName="@商品コード" Precision="0" ProviderType="VarChar" Scale="0" Size="13" SourceColumn="商品コード" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_ShoTourokuTableAdapter" GeneratorDataComponentClassName="vw_ShoTourokuTableAdapter" Name="vw_ShoTouroku" UserDataComponentName="vw_ShoTourokuTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SPEEDDBConnectionString (Settings)" DbObjectName="SPEEDDB.dbo.vw_ShoTouroku" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 商品コード, フリガナ, バーコード, 商品名, 規格, 形式寸法, 材質, 分類, 入数, 単位コード, 主要仕入先, 品種コード, メーカーコード, 棚番コード, 在庫管理区分, 諸口区分, 規格諸口区分, セット区分, 定価, 単価, 原価単価, 評価単価, 評価単価前, 現在在庫数, 外内税区分, 消費税率, 新消費税率, 新消費税適用, 商分類Ａコード, 商分類Ｂコード, 商分類Ｃコード, ランク１単価, ランク２単価, ランク３単価, ランク４単価, ランク５単価, 最終売上日, 最終仕入日, 取引開始日, 作成日 FROM dbo.vw_ShoTouroku</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="商品コード" DataSetColumn="商品コード" />
+              <Mapping SourceColumn="フリガナ" DataSetColumn="フリガナ" />
+              <Mapping SourceColumn="バーコード" DataSetColumn="バーコード" />
+              <Mapping SourceColumn="商品名" DataSetColumn="商品名" />
+              <Mapping SourceColumn="規格" DataSetColumn="規格" />
+              <Mapping SourceColumn="形式寸法" DataSetColumn="形式寸法" />
+              <Mapping SourceColumn="材質" DataSetColumn="材質" />
+              <Mapping SourceColumn="分類" DataSetColumn="分類" />
+              <Mapping SourceColumn="入数" DataSetColumn="入数" />
+              <Mapping SourceColumn="単位コード" DataSetColumn="単位コード" />
+              <Mapping SourceColumn="主要仕入先" DataSetColumn="主要仕入先" />
+              <Mapping SourceColumn="品種コード" DataSetColumn="品種コード" />
+              <Mapping SourceColumn="メーカーコード" DataSetColumn="メーカーコード" />
+              <Mapping SourceColumn="棚番コード" DataSetColumn="棚番コード" />
+              <Mapping SourceColumn="在庫管理区分" DataSetColumn="在庫管理区分" />
+              <Mapping SourceColumn="諸口区分" DataSetColumn="諸口区分" />
+              <Mapping SourceColumn="規格諸口区分" DataSetColumn="規格諸口区分" />
+              <Mapping SourceColumn="セット区分" DataSetColumn="セット区分" />
+              <Mapping SourceColumn="定価" DataSetColumn="定価" />
+              <Mapping SourceColumn="単価" DataSetColumn="単価" />
+              <Mapping SourceColumn="原価単価" DataSetColumn="原価単価" />
+              <Mapping SourceColumn="評価単価" DataSetColumn="評価単価" />
+              <Mapping SourceColumn="評価単価前" DataSetColumn="評価単価前" />
+              <Mapping SourceColumn="現在在庫数" DataSetColumn="現在在庫数" />
+              <Mapping SourceColumn="外内税区分" DataSetColumn="外内税区分" />
+              <Mapping SourceColumn="消費税率" DataSetColumn="消費税率" />
+              <Mapping SourceColumn="新消費税率" DataSetColumn="新消費税率" />
+              <Mapping SourceColumn="新消費税適用" DataSetColumn="新消費税適用" />
+              <Mapping SourceColumn="商分類Ａコード" DataSetColumn="商分類Ａコード" />
+              <Mapping SourceColumn="商分類Ｂコード" DataSetColumn="商分類Ｂコード" />
+              <Mapping SourceColumn="商分類Ｃコード" DataSetColumn="商分類Ｃコード" />
+              <Mapping SourceColumn="ランク１単価" DataSetColumn="ランク１単価" />
+              <Mapping SourceColumn="ランク２単価" DataSetColumn="ランク２単価" />
+              <Mapping SourceColumn="ランク３単価" DataSetColumn="ランク３単価" />
+              <Mapping SourceColumn="ランク４単価" DataSetColumn="ランク４単価" />
+              <Mapping SourceColumn="ランク５単価" DataSetColumn="ランク５単価" />
+              <Mapping SourceColumn="最終売上日" DataSetColumn="最終売上日" />
+              <Mapping SourceColumn="最終仕入日" DataSetColumn="最終仕入日" />
+              <Mapping SourceColumn="取引開始日" DataSetColumn="取引開始日" />
+              <Mapping SourceColumn="作成日" DataSetColumn="作成日" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_SiiresakiTableAdapter" GeneratorDataComponentClassName="vw_SiiresakiTableAdapter" Name="vw_Siiresaki" UserDataComponentName="vw_SiiresakiTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SPEEDDBConnectionString (Settings)" DbObjectName="SPEEDDB.dbo.vw_Siiresaki" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 仕入先コード, 仕入先名, 略名, 仕入分類, 事業所コード, 諸口区分, 担当者コード, 仕入切捨区分, 仕入税区分, 最終支払年月日, 締日Ａ, 締日Ｂ, 締日Ｃ, 支払残高 FROM dbo.vw_Siiresaki</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="仕入先コード" DataSetColumn="仕入先コード" />
+              <Mapping SourceColumn="仕入先名" DataSetColumn="仕入先名" />
+              <Mapping SourceColumn="略名" DataSetColumn="略名" />
+              <Mapping SourceColumn="仕入分類" DataSetColumn="仕入分類" />
+              <Mapping SourceColumn="事業所コード" DataSetColumn="事業所コード" />
+              <Mapping SourceColumn="諸口区分" DataSetColumn="諸口区分" />
+              <Mapping SourceColumn="担当者コード" DataSetColumn="担当者コード" />
+              <Mapping SourceColumn="仕入切捨区分" DataSetColumn="仕入切捨区分" />
+              <Mapping SourceColumn="仕入税区分" DataSetColumn="仕入税区分" />
+              <Mapping SourceColumn="最終支払年月日" DataSetColumn="最終支払年月日" />
+              <Mapping SourceColumn="締日Ａ" DataSetColumn="締日Ａ" />
+              <Mapping SourceColumn="締日Ｂ" DataSetColumn="締日Ｂ" />
+              <Mapping SourceColumn="締日Ｃ" DataSetColumn="締日Ｃ" />
+              <Mapping SourceColumn="支払残高" DataSetColumn="支払残高" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="SPEEDDBConnectionString (Settings)" DbObjectName="SPEEDDB.dbo.vw_Siiresaki" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy仕入先コード" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy仕入先コード" GeneratorSourceName="FillBy仕入先コード" GetMethodModifier="Public" GetMethodName="GetDataBy仕入先コード" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy仕入先コード" UserSourceName="FillBy仕入先コード">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT            仕入先コード, 仕入先名, 略名, 仕入分類, 事業所コード, 諸口区分, 担当者コード, 仕入切捨区分, 仕入税区分, 最終支払年月日, 締日Ａ, 締日Ｂ, 締日Ｃ, 支払残高
+FROM              vw_Siiresaki
+WHERE             (仕入先コード = @仕入先コード)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="仕入先コード" ColumnName="仕入先コード" DataSourceName="SPEEDDB.dbo.vw_Siiresaki" DataTypeServer="varchar(8)" DbType="AnsiString" Direction="Input" ParameterName="@仕入先コード" Precision="0" ProviderType="VarChar" Scale="0" Size="8" SourceColumn="仕入先コード" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_SiiTourokuTableAdapter" GeneratorDataComponentClassName="vw_SiiTourokuTableAdapter" Name="vw_SiiTouroku" UserDataComponentName="vw_SiiTourokuTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SPEEDDBConnectionString (Settings)" DbObjectName="SPEEDDB.dbo.vw_SiiTouroku" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 仕入先コード, フリガナ, 仕入先名, 略名, 仕入分類, 締日Ａ, 締日Ｂ, 締日Ｃ, 支払日, 事業所コード, 残登録日, 買掛金残高, 与信限度, 郵便番号, 都道府県名, 住所１, 住所２, 電話１, 電話２, 電話３, ＦＡＸ電話１, ＦＡＸ電話２, ＦＡＸ電話３, 諸口区分, 担当者コード, 掛率, 決済条件コード, 決済コメント, 現在買掛金残高, 振込元コード, 銀行コード, 銀行支店コード, 預金区分, 口座番号, 仕分類Ａコード, 仕分類Ｂコード, 仕分類Ｃコード, 仕入切捨区分, 仕入税区分, 最終支払年月日, 支払残高, [１ヶ月前支払年月日], [１ヶ月前支払残高], [２ヶ月前支払年月日], [２ヶ月前支払残高], [３ヶ月前支払年月日], [３ヶ月前支払残高], 最終仕入日, 取引開始日, 作成日 FROM dbo.vw_SiiTouroku</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="仕入先コード" DataSetColumn="仕入先コード" />
+              <Mapping SourceColumn="フリガナ" DataSetColumn="フリガナ" />
+              <Mapping SourceColumn="仕入先名" DataSetColumn="仕入先名" />
+              <Mapping SourceColumn="略名" DataSetColumn="略名" />
+              <Mapping SourceColumn="仕入分類" DataSetColumn="仕入分類" />
+              <Mapping SourceColumn="締日Ａ" DataSetColumn="締日Ａ" />
+              <Mapping SourceColumn="締日Ｂ" DataSetColumn="締日Ｂ" />
+              <Mapping SourceColumn="締日Ｃ" DataSetColumn="締日Ｃ" />
+              <Mapping SourceColumn="支払日" DataSetColumn="支払日" />
+              <Mapping SourceColumn="事業所コード" DataSetColumn="事業所コード" />
+              <Mapping SourceColumn="残登録日" DataSetColumn="残登録日" />
+              <Mapping SourceColumn="買掛金残高" DataSetColumn="買掛金残高" />
+              <Mapping SourceColumn="与信限度" DataSetColumn="与信限度" />
+              <Mapping SourceColumn="郵便番号" DataSetColumn="郵便番号" />
+              <Mapping SourceColumn="都道府県名" DataSetColumn="都道府県名" />
+              <Mapping SourceColumn="住所１" DataSetColumn="住所１" />
+              <Mapping SourceColumn="住所２" DataSetColumn="住所２" />
+              <Mapping SourceColumn="電話１" DataSetColumn="電話１" />
+              <Mapping SourceColumn="電話２" DataSetColumn="電話２" />
+              <Mapping SourceColumn="電話３" DataSetColumn="電話３" />
+              <Mapping SourceColumn="ＦＡＸ電話１" DataSetColumn="ＦＡＸ電話１" />
+              <Mapping SourceColumn="ＦＡＸ電話２" DataSetColumn="ＦＡＸ電話２" />
+              <Mapping SourceColumn="ＦＡＸ電話３" DataSetColumn="ＦＡＸ電話３" />
+              <Mapping SourceColumn="諸口区分" DataSetColumn="諸口区分" />
+              <Mapping SourceColumn="担当者コード" DataSetColumn="担当者コード" />
+              <Mapping SourceColumn="掛率" DataSetColumn="掛率" />
+              <Mapping SourceColumn="決済条件コード" DataSetColumn="決済条件コード" />
+              <Mapping SourceColumn="決済コメント" DataSetColumn="決済コメント" />
+              <Mapping SourceColumn="現在買掛金残高" DataSetColumn="現在買掛金残高" />
+              <Mapping SourceColumn="振込元コード" DataSetColumn="振込元コード" />
+              <Mapping SourceColumn="銀行コード" DataSetColumn="銀行コード" />
+              <Mapping SourceColumn="銀行支店コード" DataSetColumn="銀行支店コード" />
+              <Mapping SourceColumn="預金区分" DataSetColumn="預金区分" />
+              <Mapping SourceColumn="口座番号" DataSetColumn="口座番号" />
+              <Mapping SourceColumn="仕分類Ａコード" DataSetColumn="仕分類Ａコード" />
+              <Mapping SourceColumn="仕分類Ｂコード" DataSetColumn="仕分類Ｂコード" />
+              <Mapping SourceColumn="仕分類Ｃコード" DataSetColumn="仕分類Ｃコード" />
+              <Mapping SourceColumn="仕入切捨区分" DataSetColumn="仕入切捨区分" />
+              <Mapping SourceColumn="仕入税区分" DataSetColumn="仕入税区分" />
+              <Mapping SourceColumn="最終支払年月日" DataSetColumn="最終支払年月日" />
+              <Mapping SourceColumn="支払残高" DataSetColumn="支払残高" />
+              <Mapping SourceColumn="１ヶ月前支払年月日" DataSetColumn="１ヶ月前支払年月日" />
+              <Mapping SourceColumn="１ヶ月前支払残高" DataSetColumn="１ヶ月前支払残高" />
+              <Mapping SourceColumn="２ヶ月前支払年月日" DataSetColumn="２ヶ月前支払年月日" />
+              <Mapping SourceColumn="２ヶ月前支払残高" DataSetColumn="２ヶ月前支払残高" />
+              <Mapping SourceColumn="３ヶ月前支払年月日" DataSetColumn="３ヶ月前支払年月日" />
+              <Mapping SourceColumn="３ヶ月前支払残高" DataSetColumn="３ヶ月前支払残高" />
+              <Mapping SourceColumn="最終仕入日" DataSetColumn="最終仕入日" />
+              <Mapping SourceColumn="取引開始日" DataSetColumn="取引開始日" />
+              <Mapping SourceColumn="作成日" DataSetColumn="作成日" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_TokTourokuTableAdapter" GeneratorDataComponentClassName="vw_TokTourokuTableAdapter" Name="vw_TokTouroku" UserDataComponentName="vw_TokTourokuTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SPEEDDBConnectionString (Settings)" DbObjectName="SPEEDDB.dbo.vw_TokTouroku" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 得意先コード, フリガナ, 得意先名, 略名, 郵便番号, 都道府県名, 住所１, 住所２, 電話１, 電話２, 電話３, ＦＡＸ電話１, ＦＡＸ電話２, ＦＡＸ電話３, 諸口区分, 事業所コード, 担当者コード, 地区コード, 請求先コード, 業態コード, 締日Ａ, 締日Ｂ, 締日Ｃ, 回収月, 回収日, 決済条件コード, 決済コメント, 仕入先コード, 残登録日, 売掛金残高, 与信限度, 現在売掛金残高, 得分類Ａコード, 得分類Ｂコード, 得分類Ｃコード, 売上切捨区分, 売上税区分, ランク, 掛率, 検収区分, 最終請求年月日, 請求額, [１ヶ月前請求年月日], [１ヶ月前請求額], [２ヶ月前請求年月日], [２ヶ月前請求額], [３ヶ月前請求年月日], [３ヶ月前請求額], 最終売上日, 取引開始日, 作成日 FROM dbo.vw_TokTouroku</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="得意先コード" DataSetColumn="得意先コード" />
+              <Mapping SourceColumn="フリガナ" DataSetColumn="フリガナ" />
+              <Mapping SourceColumn="得意先名" DataSetColumn="得意先名" />
+              <Mapping SourceColumn="略名" DataSetColumn="略名" />
+              <Mapping SourceColumn="郵便番号" DataSetColumn="郵便番号" />
+              <Mapping SourceColumn="都道府県名" DataSetColumn="都道府県名" />
+              <Mapping SourceColumn="住所１" DataSetColumn="住所１" />
+              <Mapping SourceColumn="住所２" DataSetColumn="住所２" />
+              <Mapping SourceColumn="電話１" DataSetColumn="電話１" />
+              <Mapping SourceColumn="電話２" DataSetColumn="電話２" />
+              <Mapping SourceColumn="電話３" DataSetColumn="電話３" />
+              <Mapping SourceColumn="ＦＡＸ電話１" DataSetColumn="ＦＡＸ電話１" />
+              <Mapping SourceColumn="ＦＡＸ電話２" DataSetColumn="ＦＡＸ電話２" />
+              <Mapping SourceColumn="ＦＡＸ電話３" DataSetColumn="ＦＡＸ電話３" />
+              <Mapping SourceColumn="諸口区分" DataSetColumn="諸口区分" />
+              <Mapping SourceColumn="事業所コード" DataSetColumn="事業所コード" />
+              <Mapping SourceColumn="担当者コード" DataSetColumn="担当者コード" />
+              <Mapping SourceColumn="地区コード" DataSetColumn="地区コード" />
+              <Mapping SourceColumn="請求先コード" DataSetColumn="請求先コード" />
+              <Mapping SourceColumn="業態コード" DataSetColumn="業態コード" />
+              <Mapping SourceColumn="締日Ａ" DataSetColumn="締日Ａ" />
+              <Mapping SourceColumn="締日Ｂ" DataSetColumn="締日Ｂ" />
+              <Mapping SourceColumn="締日Ｃ" DataSetColumn="締日Ｃ" />
+              <Mapping SourceColumn="回収月" DataSetColumn="回収月" />
+              <Mapping SourceColumn="回収日" DataSetColumn="回収日" />
+              <Mapping SourceColumn="決済条件コード" DataSetColumn="決済条件コード" />
+              <Mapping SourceColumn="決済コメント" DataSetColumn="決済コメント" />
+              <Mapping SourceColumn="仕入先コード" DataSetColumn="仕入先コード" />
+              <Mapping SourceColumn="残登録日" DataSetColumn="残登録日" />
+              <Mapping SourceColumn="売掛金残高" DataSetColumn="売掛金残高" />
+              <Mapping SourceColumn="与信限度" DataSetColumn="与信限度" />
+              <Mapping SourceColumn="現在売掛金残高" DataSetColumn="現在売掛金残高" />
+              <Mapping SourceColumn="得分類Ａコード" DataSetColumn="得分類Ａコード" />
+              <Mapping SourceColumn="得分類Ｂコード" DataSetColumn="得分類Ｂコード" />
+              <Mapping SourceColumn="得分類Ｃコード" DataSetColumn="得分類Ｃコード" />
+              <Mapping SourceColumn="売上切捨区分" DataSetColumn="売上切捨区分" />
+              <Mapping SourceColumn="売上税区分" DataSetColumn="売上税区分" />
+              <Mapping SourceColumn="ランク" DataSetColumn="ランク" />
+              <Mapping SourceColumn="掛率" DataSetColumn="掛率" />
+              <Mapping SourceColumn="検収区分" DataSetColumn="検収区分" />
+              <Mapping SourceColumn="最終請求年月日" DataSetColumn="最終請求年月日" />
+              <Mapping SourceColumn="請求額" DataSetColumn="請求額" />
+              <Mapping SourceColumn="１ヶ月前請求年月日" DataSetColumn="１ヶ月前請求年月日" />
+              <Mapping SourceColumn="１ヶ月前請求額" DataSetColumn="１ヶ月前請求額" />
+              <Mapping SourceColumn="２ヶ月前請求年月日" DataSetColumn="２ヶ月前請求年月日" />
+              <Mapping SourceColumn="２ヶ月前請求額" DataSetColumn="２ヶ月前請求額" />
+              <Mapping SourceColumn="３ヶ月前請求年月日" DataSetColumn="３ヶ月前請求年月日" />
+              <Mapping SourceColumn="３ヶ月前請求額" DataSetColumn="３ヶ月前請求額" />
+              <Mapping SourceColumn="最終売上日" DataSetColumn="最終売上日" />
+              <Mapping SourceColumn="取引開始日" DataSetColumn="取引開始日" />
+              <Mapping SourceColumn="作成日" DataSetColumn="作成日" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_TokuisakiTableAdapter" GeneratorDataComponentClassName="vw_TokuisakiTableAdapter" Name="vw_Tokuisaki" UserDataComponentName="vw_TokuisakiTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SPEEDDBConnectionString (Settings)" DbObjectName="SPEEDDB.dbo.vw_Tokuisaki" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 得意先コード, 得意先名, フリガナ, 諸口区分, 事業所コード, 担当者コード, 請求先コード, 売上切捨区分, 売上税区分, ランク, 掛率, 最終請求年月日, 締日Ａ, 締日Ｂ, 締日Ｃ, 請求額 FROM dbo.vw_Tokuisaki</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="得意先コード" DataSetColumn="得意先コード" />
+              <Mapping SourceColumn="得意先名" DataSetColumn="得意先名" />
+              <Mapping SourceColumn="フリガナ" DataSetColumn="フリガナ" />
+              <Mapping SourceColumn="諸口区分" DataSetColumn="諸口区分" />
+              <Mapping SourceColumn="事業所コード" DataSetColumn="事業所コード" />
+              <Mapping SourceColumn="担当者コード" DataSetColumn="担当者コード" />
+              <Mapping SourceColumn="請求先コード" DataSetColumn="請求先コード" />
+              <Mapping SourceColumn="売上切捨区分" DataSetColumn="売上切捨区分" />
+              <Mapping SourceColumn="売上税区分" DataSetColumn="売上税区分" />
+              <Mapping SourceColumn="ランク" DataSetColumn="ランク" />
+              <Mapping SourceColumn="掛率" DataSetColumn="掛率" />
+              <Mapping SourceColumn="最終請求年月日" DataSetColumn="最終請求年月日" />
+              <Mapping SourceColumn="締日Ａ" DataSetColumn="締日Ａ" />
+              <Mapping SourceColumn="締日Ｂ" DataSetColumn="締日Ｂ" />
+              <Mapping SourceColumn="締日Ｃ" DataSetColumn="締日Ｃ" />
+              <Mapping SourceColumn="請求額" DataSetColumn="請求額" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="SPEEDDBConnectionString (Settings)" DbObjectName="SPEEDDB.dbo.vw_Tokuisaki" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy得意先コード" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy得意先コード" GeneratorSourceName="FillBy得意先コード" GetMethodModifier="Public" GetMethodName="GetDataBy得意先コード" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy得意先コード" UserSourceName="FillBy得意先コード">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT            得意先コード, 得意先名, フリガナ, 諸口区分, 事業所コード, 担当者コード, 請求先コード, 売上切捨区分, 売上税区分, ランク, 掛率, 最終請求年月日, 締日Ａ, 締日Ｂ, 締日Ｃ, 
+                        請求額
+FROM              vw_Tokuisaki
+WHERE             (得意先コード = @得意先コード)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="得意先コード" ColumnName="得意先コード" DataSourceName="SPEEDDB.dbo.vw_Tokuisaki" DataTypeServer="varchar(8)" DbType="AnsiString" Direction="Input" ParameterName="@得意先コード" Precision="0" ProviderType="VarChar" Scale="0" Size="8" SourceColumn="得意先コード" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="T商品変換マスタTableAdapter" GeneratorDataComponentClassName="T商品変換マスタTableAdapter" Name="T商品変換マスタ" UserDataComponentName="T商品変換マスタTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SPEEDDBConnectionString (Settings)" DbObjectName="SPEEDDB.dbo.T商品変換マスタ" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [T商品変換マスタ] WHERE (([先方商品コード] = @Original_ＥＯＳ商品コード) AND ((@IsNull_表示価格 = 1 AND [店舗売価] IS NULL) OR ([店舗売価] = @Original_表示価格)) AND ([先方商品コード] = @Original_ＪＡＮコード) AND ((@IsNull_店舗売価 = 1 AND [店舗売価] IS NULL) OR ([店舗売価] = @Original_店舗売価)) AND ([得意先コード] = @Original_得意先コード))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ＥＯＳ商品コード" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ＥＯＳ商品コード" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_表示価格" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="表示価格" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_表示価格" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="表示価格" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ＪＡＮコード" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ＪＡＮコード" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_店舗売価" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="店舗売価" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_店舗売価" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="店舗売価" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_得意先コード" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="得意先コード" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [T商品変換マスタ] ([先方商品コード], [店舗売価], [先方商品コード], [店舗売価], [得意先コード]) VALUES (@ＥＯＳ商品コード, @表示価格, @ＪＡＮコード, @店舗売価, @得意先コード);
+SELECT 先方商品コード AS ＥＯＳ商品コード, 店舗売価 AS 表示価格, 先方商品コード AS ＪＡＮコード, 店舗売価, 得意先コード FROM T商品変換マスタ WHERE (先方商品コード = @先方商品コード) AND (先方商品コード = @先方商品コード) AND (得意先コード = @得意先コード)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ＥＯＳ商品コード" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ＥＯＳ商品コード" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@表示価格" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="表示価格" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ＪＡＮコード" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ＪＡＮコード" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@店舗売価" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="店舗売価" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@得意先コード" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="得意先コード" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="先方商品コード" ColumnName="先方商品コード" DataSourceName="SPEEDDB.dbo.T商品変換マスタ" DataTypeServer="varchar(20)" DbType="AnsiString" Direction="Input" ParameterName="@先方商品コード" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="ＥＯＳ商品コード" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT 先方商品コード AS ＥＯＳ商品コード, 店舗売価 AS 表示価格, 先方商品コード AS ＪＡＮコード, 店舗売価, 得意先コード FROM T商品変換マスタ WHERE (得意先コード = '450099') AND (商品コード = @商品コード)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="商品コード" ColumnName="商品コード" DataSourceName="SPEEDDB.dbo.T商品変換マスタ" DataTypeServer="varchar(13)" DbType="AnsiString" Direction="Input" ParameterName="@商品コード" Precision="0" ProviderType="VarChar" Scale="0" Size="13" SourceColumn="商品コード" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [T商品変換マスタ] SET [先方商品コード] = @ＥＯＳ商品コード, [店舗売価] = @表示価格, [先方商品コード] = @ＪＡＮコード, [店舗売価] = @店舗売価, [得意先コード] = @得意先コード WHERE (([先方商品コード] = @Original_ＥＯＳ商品コード) AND ((@IsNull_表示価格 = 1 AND [店舗売価] IS NULL) OR ([店舗売価] = @Original_表示価格)) AND ([先方商品コード] = @Original_ＪＡＮコード) AND ((@IsNull_店舗売価 = 1 AND [店舗売価] IS NULL) OR ([店舗売価] = @Original_店舗売価)) AND ([得意先コード] = @Original_得意先コード));
+SELECT 先方商品コード AS ＥＯＳ商品コード, 店舗売価 AS 表示価格, 先方商品コード AS ＪＡＮコード, 店舗売価, 得意先コード FROM T商品変換マスタ WHERE (先方商品コード = @先方商品コード) AND (先方商品コード = @先方商品コード) AND (得意先コード = @得意先コード)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ＥＯＳ商品コード" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ＥＯＳ商品コード" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@表示価格" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="表示価格" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ＪＡＮコード" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ＪＡＮコード" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@店舗売価" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="店舗売価" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@得意先コード" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="得意先コード" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ＥＯＳ商品コード" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ＥＯＳ商品コード" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_表示価格" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="表示価格" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_表示価格" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="表示価格" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ＪＡＮコード" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ＪＡＮコード" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_店舗売価" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="店舗売価" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_店舗売価" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="店舗売価" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_得意先コード" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="得意先コード" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="先方商品コード" ColumnName="先方商品コード" DataSourceName="SPEEDDB.dbo.T商品変換マスタ" DataTypeServer="varchar(20)" DbType="AnsiString" Direction="Input" ParameterName="@先方商品コード" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="ＥＯＳ商品コード" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ＥＯＳ商品コード" DataSetColumn="ＥＯＳ商品コード" />
+              <Mapping SourceColumn="表示価格" DataSetColumn="表示価格" />
+              <Mapping SourceColumn="ＪＡＮコード" DataSetColumn="ＪＡＮコード" />
+              <Mapping SourceColumn="店舗売価" DataSetColumn="店舗売価" />
+              <Mapping SourceColumn="得意先コード" DataSetColumn="得意先コード" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SPEEDDBVIEWDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SPEEDDBVIEWDataSet" msprop:Generator_UserDSName="SPEEDDBVIEWDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_ON_CheckSeikyu" msprop:Generator_TableClassName="vw_ON_CheckSeikyuDataTable" msprop:Generator_TableVarName="tablevw_ON_CheckSeikyu" msprop:Generator_RowChangedName="vw_ON_CheckSeikyuRowChanged" msprop:Generator_TablePropName="vw_ON_CheckSeikyu" msprop:Generator_RowDeletingName="vw_ON_CheckSeikyuRowDeleting" msprop:Generator_RowChangingName="vw_ON_CheckSeikyuRowChanging" msprop:Generator_RowEvHandlerName="vw_ON_CheckSeikyuRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_ON_CheckSeikyuRowDeleted" msprop:Generator_RowClassName="vw_ON_CheckSeikyuRow" msprop:Generator_UserTableName="vw_ON_CheckSeikyu" msprop:Generator_RowEvArgName="vw_ON_CheckSeikyuRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="処理番号" msprop:Generator_ColumnVarNameInTable="column処理番号" msprop:Generator_ColumnPropNameInRow="処理番号" msprop:Generator_ColumnPropNameInTable="処理番号Column" msprop:Generator_UserColumnName="処理番号" type="xs:int" minOccurs="0" />
+              <xs:element name="処理名" msprop:Generator_ColumnVarNameInTable="column処理名" msprop:Generator_ColumnPropNameInRow="処理名" msprop:Generator_ColumnPropNameInTable="処理名Column" msprop:Generator_UserColumnName="処理名" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="入力区分" msprop:Generator_ColumnVarNameInTable="column入力区分" msprop:Generator_ColumnPropNameInRow="入力区分" msprop:Generator_ColumnPropNameInTable="入力区分Column" msprop:Generator_UserColumnName="入力区分">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="伝票番号" msprop:Generator_ColumnVarNameInTable="column伝票番号" msprop:Generator_ColumnPropNameInRow="伝票番号" msprop:Generator_ColumnPropNameInTable="伝票番号Column" msprop:Generator_UserColumnName="伝票番号" type="xs:int" minOccurs="0" />
+              <xs:element name="売上_xFF0F_入金日" msprop:Generator_ColumnVarNameInTable="_column売上_入金日" msprop:Generator_ColumnPropNameInRow="_売上_入金日" msprop:Generator_ColumnPropNameInTable="_売上_入金日Column" msprop:Generator_UserColumnName="売上／入金日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="最終請求年月日" msprop:Generator_ColumnVarNameInTable="column最終請求年月日" msprop:Generator_ColumnPropNameInRow="最終請求年月日" msprop:Generator_ColumnPropNameInTable="最終請求年月日Column" msprop:Generator_UserColumnName="最終請求年月日" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_ON_CheckShiharai" msprop:Generator_TableClassName="vw_ON_CheckShiharaiDataTable" msprop:Generator_TableVarName="tablevw_ON_CheckShiharai" msprop:Generator_RowChangedName="vw_ON_CheckShiharaiRowChanged" msprop:Generator_TablePropName="vw_ON_CheckShiharai" msprop:Generator_RowDeletingName="vw_ON_CheckShiharaiRowDeleting" msprop:Generator_RowChangingName="vw_ON_CheckShiharaiRowChanging" msprop:Generator_RowEvHandlerName="vw_ON_CheckShiharaiRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_ON_CheckShiharaiRowDeleted" msprop:Generator_RowClassName="vw_ON_CheckShiharaiRow" msprop:Generator_UserTableName="vw_ON_CheckShiharai" msprop:Generator_RowEvArgName="vw_ON_CheckShiharaiRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="処理番号" msprop:Generator_ColumnVarNameInTable="column処理番号" msprop:Generator_ColumnPropNameInRow="処理番号" msprop:Generator_ColumnPropNameInTable="処理番号Column" msprop:Generator_UserColumnName="処理番号" type="xs:int" minOccurs="0" />
+              <xs:element name="処理名" msprop:Generator_ColumnVarNameInTable="column処理名" msprop:Generator_ColumnPropNameInRow="処理名" msprop:Generator_ColumnPropNameInTable="処理名Column" msprop:Generator_UserColumnName="処理名" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="入力区分" msprop:Generator_ColumnVarNameInTable="column入力区分" msprop:Generator_ColumnPropNameInRow="入力区分" msprop:Generator_ColumnPropNameInTable="入力区分Column" msprop:Generator_UserColumnName="入力区分">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="伝票番号" msprop:Generator_ColumnVarNameInTable="column伝票番号" msprop:Generator_ColumnPropNameInRow="伝票番号" msprop:Generator_ColumnPropNameInTable="伝票番号Column" msprop:Generator_UserColumnName="伝票番号" type="xs:int" minOccurs="0" />
+              <xs:element name="仕入_xFF0F_支払日" msprop:Generator_ColumnVarNameInTable="_column仕入_支払日" msprop:Generator_ColumnPropNameInRow="_仕入_支払日" msprop:Generator_ColumnPropNameInTable="_仕入_支払日Column" msprop:Generator_UserColumnName="仕入／支払日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="最終支払年月日" msprop:Generator_ColumnVarNameInTable="column最終支払年月日" msprop:Generator_ColumnPropNameInRow="最終支払年月日" msprop:Generator_ColumnPropNameInTable="最終支払年月日Column" msprop:Generator_UserColumnName="最終支払年月日" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_Ryakumei_Sir" msprop:Generator_TableClassName="vw_Ryakumei_SirDataTable" msprop:Generator_TableVarName="tablevw_Ryakumei_Sir" msprop:Generator_RowChangedName="vw_Ryakumei_SirRowChanged" msprop:Generator_TablePropName="vw_Ryakumei_Sir" msprop:Generator_RowDeletingName="vw_Ryakumei_SirRowDeleting" msprop:Generator_RowChangingName="vw_Ryakumei_SirRowChanging" msprop:Generator_RowEvHandlerName="vw_Ryakumei_SirRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_Ryakumei_SirRowDeleted" msprop:Generator_RowClassName="vw_Ryakumei_SirRow" msprop:Generator_UserTableName="vw_Ryakumei_Sir" msprop:Generator_RowEvArgName="vw_Ryakumei_SirRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SirCD" msprop:Generator_ColumnVarNameInTable="columnSirCD" msprop:Generator_ColumnPropNameInRow="SirCD" msprop:Generator_ColumnPropNameInTable="SirCDColumn" msprop:Generator_UserColumnName="SirCD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SirName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSirName" msprop:Generator_ColumnPropNameInRow="SirName" msprop:Generator_ColumnPropNameInTable="SirNameColumn" msprop:Generator_UserColumnName="SirName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_Ryakumei_Tok" msprop:Generator_TableClassName="vw_Ryakumei_TokDataTable" msprop:Generator_TableVarName="tablevw_Ryakumei_Tok" msprop:Generator_RowChangedName="vw_Ryakumei_TokRowChanged" msprop:Generator_TablePropName="vw_Ryakumei_Tok" msprop:Generator_RowDeletingName="vw_Ryakumei_TokRowDeleting" msprop:Generator_RowChangingName="vw_Ryakumei_TokRowChanging" msprop:Generator_RowEvHandlerName="vw_Ryakumei_TokRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_Ryakumei_TokRowDeleted" msprop:Generator_RowClassName="vw_Ryakumei_TokRow" msprop:Generator_UserTableName="vw_Ryakumei_Tok" msprop:Generator_RowEvArgName="vw_Ryakumei_TokRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TokCD" msprop:Generator_ColumnVarNameInTable="columnTokCD" msprop:Generator_ColumnPropNameInRow="TokCD" msprop:Generator_ColumnPropNameInTable="TokCDColumn" msprop:Generator_UserColumnName="TokCD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TokName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTokName" msprop:Generator_ColumnPropNameInRow="TokName" msprop:Generator_ColumnPropNameInTable="TokNameColumn" msprop:Generator_UserColumnName="TokName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TanCD" msprop:Generator_ColumnVarNameInTable="columnTanCD" msprop:Generator_ColumnPropNameInRow="TanCD" msprop:Generator_ColumnPropNameInTable="TanCDColumn" msprop:Generator_UserColumnName="TanCD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_Shohin" msprop:Generator_TableClassName="vw_ShohinDataTable" msprop:Generator_TableVarName="tablevw_Shohin" msprop:Generator_RowChangedName="vw_ShohinRowChanged" msprop:Generator_TablePropName="vw_Shohin" msprop:Generator_RowDeletingName="vw_ShohinRowDeleting" msprop:Generator_RowChangingName="vw_ShohinRowChanging" msprop:Generator_RowEvHandlerName="vw_ShohinRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_ShohinRowDeleted" msprop:Generator_RowClassName="vw_ShohinRow" msprop:Generator_UserTableName="vw_Shohin" msprop:Generator_RowEvArgName="vw_ShohinRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="商品コード" msprop:Generator_ColumnVarNameInTable="column商品コード" msprop:Generator_ColumnPropNameInRow="商品コード" msprop:Generator_ColumnPropNameInTable="商品コードColumn" msprop:Generator_UserColumnName="商品コード">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="商品名" msprop:Generator_ColumnVarNameInTable="column商品名" msprop:Generator_ColumnPropNameInRow="商品名" msprop:Generator_ColumnPropNameInTable="商品名Column" msprop:Generator_UserColumnName="商品名" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="規格" msprop:Generator_ColumnVarNameInTable="column規格" msprop:Generator_ColumnPropNameInRow="規格" msprop:Generator_ColumnPropNameInTable="規格Column" msprop:Generator_UserColumnName="規格" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="形式寸法" msprop:Generator_ColumnVarNameInTable="column形式寸法" msprop:Generator_ColumnPropNameInRow="形式寸法" msprop:Generator_ColumnPropNameInTable="形式寸法Column" msprop:Generator_UserColumnName="形式寸法" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="材質" msprop:Generator_ColumnVarNameInTable="column材質" msprop:Generator_ColumnPropNameInRow="材質" msprop:Generator_ColumnPropNameInTable="材質Column" msprop:Generator_UserColumnName="材質" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="分類" msprop:Generator_ColumnVarNameInTable="column分類" msprop:Generator_ColumnPropNameInRow="分類" msprop:Generator_ColumnPropNameInTable="分類Column" msprop:Generator_UserColumnName="分類" type="xs:short" minOccurs="0" />
+              <xs:element name="入数" msprop:Generator_ColumnVarNameInTable="column入数" msprop:Generator_ColumnPropNameInRow="入数" msprop:Generator_ColumnPropNameInTable="入数Column" msprop:Generator_UserColumnName="入数" type="xs:decimal" minOccurs="0" />
+              <xs:element name="単位コード" msprop:Generator_ColumnVarNameInTable="column単位コード" msprop:Generator_ColumnPropNameInRow="単位コード" msprop:Generator_ColumnPropNameInTable="単位コードColumn" msprop:Generator_UserColumnName="単位コード" type="xs:short" minOccurs="0" />
+              <xs:element name="主要仕入先" msprop:Generator_ColumnVarNameInTable="column主要仕入先" msprop:Generator_ColumnPropNameInRow="主要仕入先" msprop:Generator_ColumnPropNameInTable="主要仕入先Column" msprop:Generator_UserColumnName="主要仕入先" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="品種コード" msprop:Generator_ColumnVarNameInTable="column品種コード" msprop:Generator_ColumnPropNameInRow="品種コード" msprop:Generator_ColumnPropNameInTable="品種コードColumn" msprop:Generator_UserColumnName="品種コード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="メーカーコード" msprop:Generator_ColumnVarNameInTable="columnメーカーコード" msprop:Generator_ColumnPropNameInRow="メーカーコード" msprop:Generator_ColumnPropNameInTable="メーカーコードColumn" msprop:Generator_UserColumnName="メーカーコード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="在庫管理区分" msprop:Generator_ColumnVarNameInTable="column在庫管理区分" msprop:Generator_ColumnPropNameInRow="在庫管理区分" msprop:Generator_ColumnPropNameInTable="在庫管理区分Column" msprop:Generator_UserColumnName="在庫管理区分" type="xs:boolean" />
+              <xs:element name="諸口区分" msprop:Generator_ColumnVarNameInTable="column諸口区分" msprop:Generator_ColumnPropNameInRow="諸口区分" msprop:Generator_ColumnPropNameInTable="諸口区分Column" msprop:Generator_UserColumnName="諸口区分" type="xs:boolean" />
+              <xs:element name="規格諸口区分" msprop:Generator_ColumnVarNameInTable="column規格諸口区分" msprop:Generator_ColumnPropNameInRow="規格諸口区分" msprop:Generator_ColumnPropNameInTable="規格諸口区分Column" msprop:Generator_UserColumnName="規格諸口区分" type="xs:boolean" />
+              <xs:element name="定価" msprop:Generator_ColumnVarNameInTable="column定価" msprop:Generator_ColumnPropNameInRow="定価" msprop:Generator_ColumnPropNameInTable="定価Column" msprop:Generator_UserColumnName="定価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="単価" msprop:Generator_ColumnVarNameInTable="column単価" msprop:Generator_ColumnPropNameInRow="単価" msprop:Generator_ColumnPropNameInTable="単価Column" msprop:Generator_UserColumnName="単価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="原価単価" msprop:Generator_ColumnVarNameInTable="column原価単価" msprop:Generator_ColumnPropNameInRow="原価単価" msprop:Generator_ColumnPropNameInTable="原価単価Column" msprop:Generator_UserColumnName="原価単価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="評価単価" msprop:Generator_ColumnVarNameInTable="column評価単価" msprop:Generator_ColumnPropNameInRow="評価単価" msprop:Generator_ColumnPropNameInTable="評価単価Column" msprop:Generator_UserColumnName="評価単価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="外内税区分" msprop:Generator_ColumnVarNameInTable="column外内税区分" msprop:Generator_ColumnPropNameInRow="外内税区分" msprop:Generator_ColumnPropNameInTable="外内税区分Column" msprop:Generator_UserColumnName="外内税区分" type="xs:short" minOccurs="0" />
+              <xs:element name="消費税率" msprop:Generator_ColumnVarNameInTable="column消費税率" msprop:Generator_ColumnPropNameInRow="消費税率" msprop:Generator_ColumnPropNameInTable="消費税率Column" msprop:Generator_UserColumnName="消費税率" type="xs:decimal" minOccurs="0" />
+              <xs:element name="新消費税率" msprop:Generator_ColumnVarNameInTable="column新消費税率" msprop:Generator_ColumnPropNameInRow="新消費税率" msprop:Generator_ColumnPropNameInTable="新消費税率Column" msprop:Generator_UserColumnName="新消費税率" type="xs:decimal" minOccurs="0" />
+              <xs:element name="新消費税適用" msprop:Generator_ColumnVarNameInTable="column新消費税適用" msprop:Generator_ColumnPropNameInRow="新消費税適用" msprop:Generator_ColumnPropNameInTable="新消費税適用Column" msprop:Generator_UserColumnName="新消費税適用" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ランク_xFF11_単価" msprop:Generator_ColumnVarNameInTable="columnランク１単価" msprop:Generator_ColumnPropNameInRow="ランク１単価" msprop:Generator_ColumnPropNameInTable="ランク１単価Column" msprop:Generator_UserColumnName="ランク１単価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ランク_xFF12_単価" msprop:Generator_ColumnVarNameInTable="columnランク２単価" msprop:Generator_ColumnPropNameInRow="ランク２単価" msprop:Generator_ColumnPropNameInTable="ランク２単価Column" msprop:Generator_UserColumnName="ランク２単価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ランク_xFF13_単価" msprop:Generator_ColumnVarNameInTable="columnランク３単価" msprop:Generator_ColumnPropNameInRow="ランク３単価" msprop:Generator_ColumnPropNameInTable="ランク３単価Column" msprop:Generator_UserColumnName="ランク３単価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ランク_xFF14_単価" msprop:Generator_ColumnVarNameInTable="columnランク４単価" msprop:Generator_ColumnPropNameInRow="ランク４単価" msprop:Generator_ColumnPropNameInTable="ランク４単価Column" msprop:Generator_UserColumnName="ランク４単価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ランク_xFF15_単価" msprop:Generator_ColumnVarNameInTable="columnランク５単価" msprop:Generator_ColumnPropNameInRow="ランク５単価" msprop:Generator_ColumnPropNameInTable="ランク５単価Column" msprop:Generator_UserColumnName="ランク５単価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="セット区分" msprop:Generator_ColumnVarNameInTable="columnセット区分" msprop:Generator_ColumnPropNameInRow="セット区分" msprop:Generator_ColumnPropNameInTable="セット区分Column" msprop:Generator_UserColumnName="セット区分" type="xs:boolean" />
+              <xs:element name="予備仕入先" msprop:Generator_ColumnVarNameInTable="column予備仕入先" msprop:Generator_ColumnPropNameInRow="予備仕入先" msprop:Generator_ColumnPropNameInTable="予備仕入先Column" msprop:Generator_UserColumnName="予備仕入先" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="メーカー品番" msprop:Generator_ColumnVarNameInTable="columnメーカー品番" msprop:Generator_ColumnPropNameInRow="メーカー品番" msprop:Generator_ColumnPropNameInTable="メーカー品番Column" msprop:Generator_UserColumnName="メーカー品番" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="車種" msprop:Generator_ColumnVarNameInTable="column車種" msprop:Generator_ColumnPropNameInRow="車種" msprop:Generator_ColumnPropNameInTable="車種Column" msprop:Generator_UserColumnName="車種" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="棚番" msprop:Generator_ColumnVarNameInTable="column棚番" msprop:Generator_ColumnPropNameInRow="棚番" msprop:Generator_ColumnPropNameInTable="棚番Column" msprop:Generator_UserColumnName="棚番" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="倉庫コード" msprop:Generator_ColumnVarNameInTable="column倉庫コード" msprop:Generator_ColumnPropNameInRow="倉庫コード" msprop:Generator_ColumnPropNameInTable="倉庫コードColumn" msprop:Generator_UserColumnName="倉庫コード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="商品注意事項" msprop:Generator_ColumnVarNameInTable="column商品注意事項" msprop:Generator_ColumnPropNameInRow="商品注意事項" msprop:Generator_ColumnPropNameInTable="商品注意事項Column" msprop:Generator_UserColumnName="商品注意事項" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="72" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="代表納品掛率" msprop:Generator_ColumnVarNameInTable="column代表納品掛率" msprop:Generator_ColumnPropNameInRow="代表納品掛率" msprop:Generator_ColumnPropNameInTable="代表納品掛率Column" msprop:Generator_UserColumnName="代表納品掛率" type="xs:decimal" minOccurs="0" />
+              <xs:element name="代表原価掛率" msprop:Generator_ColumnVarNameInTable="column代表原価掛率" msprop:Generator_ColumnPropNameInRow="代表原価掛率" msprop:Generator_ColumnPropNameInTable="代表原価掛率Column" msprop:Generator_UserColumnName="代表原価掛率" type="xs:decimal" minOccurs="0" />
+              <xs:element name="受注残数" msprop:Generator_ColumnVarNameInTable="column受注残数" msprop:Generator_ColumnPropNameInRow="受注残数" msprop:Generator_ColumnPropNameInTable="受注残数Column" msprop:Generator_UserColumnName="受注残数" type="xs:decimal" minOccurs="0" />
+              <xs:element name="発注残数" msprop:Generator_ColumnVarNameInTable="column発注残数" msprop:Generator_ColumnPropNameInRow="発注残数" msprop:Generator_ColumnPropNameInTable="発注残数Column" msprop:Generator_UserColumnName="発注残数" type="xs:decimal" minOccurs="0" />
+              <xs:element name="現在在庫数" msprop:Generator_ColumnVarNameInTable="column現在在庫数" msprop:Generator_ColumnPropNameInRow="現在在庫数" msprop:Generator_ColumnPropNameInTable="現在在庫数Column" msprop:Generator_UserColumnName="現在在庫数" type="xs:decimal" />
+              <xs:element name="適正在庫" msprop:Generator_ColumnVarNameInTable="column適正在庫" msprop:Generator_ColumnPropNameInRow="適正在庫" msprop:Generator_ColumnPropNameInTable="適正在庫Column" msprop:Generator_UserColumnName="適正在庫" type="xs:decimal" minOccurs="0" />
+              <xs:element name="前年_xFF14_月売上数量" msprop:Generator_ColumnVarNameInTable="column前年４月売上数量" msprop:Generator_ColumnPropNameInRow="前年４月売上数量" msprop:Generator_ColumnPropNameInTable="前年４月売上数量Column" msprop:Generator_UserColumnName="前年４月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="前年_xFF15_月売上数量" msprop:Generator_ColumnVarNameInTable="column前年５月売上数量" msprop:Generator_ColumnPropNameInRow="前年５月売上数量" msprop:Generator_ColumnPropNameInTable="前年５月売上数量Column" msprop:Generator_UserColumnName="前年５月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="前年_xFF16_月売上数量" msprop:Generator_ColumnVarNameInTable="column前年６月売上数量" msprop:Generator_ColumnPropNameInRow="前年６月売上数量" msprop:Generator_ColumnPropNameInTable="前年６月売上数量Column" msprop:Generator_UserColumnName="前年６月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="前年_xFF17_月売上数量" msprop:Generator_ColumnVarNameInTable="column前年７月売上数量" msprop:Generator_ColumnPropNameInRow="前年７月売上数量" msprop:Generator_ColumnPropNameInTable="前年７月売上数量Column" msprop:Generator_UserColumnName="前年７月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="前年_xFF18_月売上数量" msprop:Generator_ColumnVarNameInTable="column前年８月売上数量" msprop:Generator_ColumnPropNameInRow="前年８月売上数量" msprop:Generator_ColumnPropNameInTable="前年８月売上数量Column" msprop:Generator_UserColumnName="前年８月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="前年_xFF19_月売上数量" msprop:Generator_ColumnVarNameInTable="column前年９月売上数量" msprop:Generator_ColumnPropNameInRow="前年９月売上数量" msprop:Generator_ColumnPropNameInTable="前年９月売上数量Column" msprop:Generator_UserColumnName="前年９月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="前年_xFF11__xFF10_月売上数量" msprop:Generator_ColumnVarNameInTable="column前年１０月売上数量" msprop:Generator_ColumnPropNameInRow="前年１０月売上数量" msprop:Generator_ColumnPropNameInTable="前年１０月売上数量Column" msprop:Generator_UserColumnName="前年１０月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="前年_xFF11__xFF11_月売上数量" msprop:Generator_ColumnVarNameInTable="column前年１１月売上数量" msprop:Generator_ColumnPropNameInRow="前年１１月売上数量" msprop:Generator_ColumnPropNameInTable="前年１１月売上数量Column" msprop:Generator_UserColumnName="前年１１月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="前年_xFF11__xFF12_月売上数量" msprop:Generator_ColumnVarNameInTable="column前年１２月売上数量" msprop:Generator_ColumnPropNameInRow="前年１２月売上数量" msprop:Generator_ColumnPropNameInTable="前年１２月売上数量Column" msprop:Generator_UserColumnName="前年１２月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="前年_xFF11_月売上数量" msprop:Generator_ColumnVarNameInTable="column前年１月売上数量" msprop:Generator_ColumnPropNameInRow="前年１月売上数量" msprop:Generator_ColumnPropNameInTable="前年１月売上数量Column" msprop:Generator_UserColumnName="前年１月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="前年_xFF12_月売上数量" msprop:Generator_ColumnVarNameInTable="column前年２月売上数量" msprop:Generator_ColumnPropNameInRow="前年２月売上数量" msprop:Generator_ColumnPropNameInTable="前年２月売上数量Column" msprop:Generator_UserColumnName="前年２月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="前年_xFF13_月売上数量" msprop:Generator_ColumnVarNameInTable="column前年３月売上数量" msprop:Generator_ColumnPropNameInRow="前年３月売上数量" msprop:Generator_ColumnPropNameInTable="前年３月売上数量Column" msprop:Generator_UserColumnName="前年３月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="当年_xFF14_月売上数量" msprop:Generator_ColumnVarNameInTable="column当年４月売上数量" msprop:Generator_ColumnPropNameInRow="当年４月売上数量" msprop:Generator_ColumnPropNameInTable="当年４月売上数量Column" msprop:Generator_UserColumnName="当年４月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="当年_xFF15_月売上数量" msprop:Generator_ColumnVarNameInTable="column当年５月売上数量" msprop:Generator_ColumnPropNameInRow="当年５月売上数量" msprop:Generator_ColumnPropNameInTable="当年５月売上数量Column" msprop:Generator_UserColumnName="当年５月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="当年_xFF16_月売上数量" msprop:Generator_ColumnVarNameInTable="column当年６月売上数量" msprop:Generator_ColumnPropNameInRow="当年６月売上数量" msprop:Generator_ColumnPropNameInTable="当年６月売上数量Column" msprop:Generator_UserColumnName="当年６月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="当年_xFF17_月売上数量" msprop:Generator_ColumnVarNameInTable="column当年７月売上数量" msprop:Generator_ColumnPropNameInRow="当年７月売上数量" msprop:Generator_ColumnPropNameInTable="当年７月売上数量Column" msprop:Generator_UserColumnName="当年７月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="当年_xFF18_月売上数量" msprop:Generator_ColumnVarNameInTable="column当年８月売上数量" msprop:Generator_ColumnPropNameInRow="当年８月売上数量" msprop:Generator_ColumnPropNameInTable="当年８月売上数量Column" msprop:Generator_UserColumnName="当年８月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="当年_xFF19_月売上数量" msprop:Generator_ColumnVarNameInTable="column当年９月売上数量" msprop:Generator_ColumnPropNameInRow="当年９月売上数量" msprop:Generator_ColumnPropNameInTable="当年９月売上数量Column" msprop:Generator_UserColumnName="当年９月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="当年_xFF11__xFF10_月売上数量" msprop:Generator_ColumnVarNameInTable="column当年１０月売上数量" msprop:Generator_ColumnPropNameInRow="当年１０月売上数量" msprop:Generator_ColumnPropNameInTable="当年１０月売上数量Column" msprop:Generator_UserColumnName="当年１０月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="当年_xFF11__xFF11_月売上数量" msprop:Generator_ColumnVarNameInTable="column当年１１月売上数量" msprop:Generator_ColumnPropNameInRow="当年１１月売上数量" msprop:Generator_ColumnPropNameInTable="当年１１月売上数量Column" msprop:Generator_UserColumnName="当年１１月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="当年_xFF11__xFF12_月売上数量" msprop:Generator_ColumnVarNameInTable="column当年１２月売上数量" msprop:Generator_ColumnPropNameInRow="当年１２月売上数量" msprop:Generator_ColumnPropNameInTable="当年１２月売上数量Column" msprop:Generator_UserColumnName="当年１２月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="当年_xFF11_月売上数量" msprop:Generator_ColumnVarNameInTable="column当年１月売上数量" msprop:Generator_ColumnPropNameInRow="当年１月売上数量" msprop:Generator_ColumnPropNameInTable="当年１月売上数量Column" msprop:Generator_UserColumnName="当年１月売上数量" type="xs:decimal" />
+              <xs:element name="当年_xFF12_月売上数量" msprop:Generator_ColumnVarNameInTable="column当年２月売上数量" msprop:Generator_ColumnPropNameInRow="当年２月売上数量" msprop:Generator_ColumnPropNameInTable="当年２月売上数量Column" msprop:Generator_UserColumnName="当年２月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="当年_xFF13_月売上数量" msprop:Generator_ColumnVarNameInTable="column当年３月売上数量" msprop:Generator_ColumnPropNameInRow="当年３月売上数量" msprop:Generator_ColumnPropNameInTable="当年３月売上数量Column" msprop:Generator_UserColumnName="当年３月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="翌年_xFF14_月売上数量" msprop:Generator_ColumnVarNameInTable="column翌年４月売上数量" msprop:Generator_ColumnPropNameInRow="翌年４月売上数量" msprop:Generator_ColumnPropNameInTable="翌年４月売上数量Column" msprop:Generator_UserColumnName="翌年４月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="翌年_xFF15_月売上数量" msprop:Generator_ColumnVarNameInTable="column翌年５月売上数量" msprop:Generator_ColumnPropNameInRow="翌年５月売上数量" msprop:Generator_ColumnPropNameInTable="翌年５月売上数量Column" msprop:Generator_UserColumnName="翌年５月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="翌年_xFF16_月売上数量" msprop:Generator_ColumnVarNameInTable="column翌年６月売上数量" msprop:Generator_ColumnPropNameInRow="翌年６月売上数量" msprop:Generator_ColumnPropNameInTable="翌年６月売上数量Column" msprop:Generator_UserColumnName="翌年６月売上数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="主要仕入先_xFF32__xFF32_" msprop:Generator_ColumnVarNameInTable="column主要仕入先ＲＲ" msprop:Generator_ColumnPropNameInRow="主要仕入先ＲＲ" msprop:Generator_ColumnPropNameInTable="主要仕入先ＲＲColumn" msprop:Generator_UserColumnName="主要仕入先ＲＲ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="予備仕入先_xFF32__xFF32_" msprop:Generator_ColumnVarNameInTable="column予備仕入先ＲＲ" msprop:Generator_ColumnPropNameInRow="予備仕入先ＲＲ" msprop:Generator_ColumnPropNameInTable="予備仕入先ＲＲColumn" msprop:Generator_UserColumnName="予備仕入先ＲＲ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_ShoTouroku" msprop:Generator_TableClassName="vw_ShoTourokuDataTable" msprop:Generator_TableVarName="tablevw_ShoTouroku" msprop:Generator_RowChangedName="vw_ShoTourokuRowChanged" msprop:Generator_TablePropName="vw_ShoTouroku" msprop:Generator_RowDeletingName="vw_ShoTourokuRowDeleting" msprop:Generator_RowChangingName="vw_ShoTourokuRowChanging" msprop:Generator_RowEvHandlerName="vw_ShoTourokuRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_ShoTourokuRowDeleted" msprop:Generator_RowClassName="vw_ShoTourokuRow" msprop:Generator_UserTableName="vw_ShoTouroku" msprop:Generator_RowEvArgName="vw_ShoTourokuRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="商品コード" msprop:Generator_ColumnVarNameInTable="column商品コード" msprop:Generator_ColumnPropNameInRow="商品コード" msprop:Generator_ColumnPropNameInTable="商品コードColumn" msprop:Generator_UserColumnName="商品コード">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="フリガナ" msprop:Generator_ColumnVarNameInTable="columnフリガナ" msprop:Generator_ColumnPropNameInRow="フリガナ" msprop:Generator_ColumnPropNameInTable="フリガナColumn" msprop:Generator_UserColumnName="フリガナ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="バーコード" msprop:Generator_ColumnVarNameInTable="columnバーコード" msprop:Generator_ColumnPropNameInRow="バーコード" msprop:Generator_ColumnPropNameInTable="バーコードColumn" msprop:Generator_UserColumnName="バーコード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="商品名" msprop:Generator_ColumnVarNameInTable="column商品名" msprop:Generator_ColumnPropNameInRow="商品名" msprop:Generator_ColumnPropNameInTable="商品名Column" msprop:Generator_UserColumnName="商品名" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="規格" msprop:Generator_ColumnVarNameInTable="column規格" msprop:Generator_ColumnPropNameInRow="規格" msprop:Generator_ColumnPropNameInTable="規格Column" msprop:Generator_UserColumnName="規格" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="24" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="形式寸法" msprop:Generator_ColumnVarNameInTable="column形式寸法" msprop:Generator_ColumnPropNameInRow="形式寸法" msprop:Generator_ColumnPropNameInTable="形式寸法Column" msprop:Generator_UserColumnName="形式寸法" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="材質" msprop:Generator_ColumnVarNameInTable="column材質" msprop:Generator_ColumnPropNameInRow="材質" msprop:Generator_ColumnPropNameInTable="材質Column" msprop:Generator_UserColumnName="材質" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="分類" msprop:Generator_ColumnVarNameInTable="column分類" msprop:Generator_ColumnPropNameInRow="分類" msprop:Generator_ColumnPropNameInTable="分類Column" msprop:Generator_UserColumnName="分類" type="xs:short" minOccurs="0" />
+              <xs:element name="入数" msprop:Generator_ColumnVarNameInTable="column入数" msprop:Generator_ColumnPropNameInRow="入数" msprop:Generator_ColumnPropNameInTable="入数Column" msprop:Generator_UserColumnName="入数" type="xs:decimal" minOccurs="0" />
+              <xs:element name="単位コード" msprop:Generator_ColumnVarNameInTable="column単位コード" msprop:Generator_ColumnPropNameInRow="単位コード" msprop:Generator_ColumnPropNameInTable="単位コードColumn" msprop:Generator_UserColumnName="単位コード" type="xs:short" minOccurs="0" />
+              <xs:element name="主要仕入先" msprop:Generator_ColumnVarNameInTable="column主要仕入先" msprop:Generator_ColumnPropNameInRow="主要仕入先" msprop:Generator_ColumnPropNameInTable="主要仕入先Column" msprop:Generator_UserColumnName="主要仕入先" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="品種コード" msprop:Generator_ColumnVarNameInTable="column品種コード" msprop:Generator_ColumnPropNameInRow="品種コード" msprop:Generator_ColumnPropNameInTable="品種コードColumn" msprop:Generator_UserColumnName="品種コード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="メーカーコード" msprop:Generator_ColumnVarNameInTable="columnメーカーコード" msprop:Generator_ColumnPropNameInRow="メーカーコード" msprop:Generator_ColumnPropNameInTable="メーカーコードColumn" msprop:Generator_UserColumnName="メーカーコード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="棚番コード" msprop:Generator_ColumnVarNameInTable="column棚番コード" msprop:Generator_ColumnPropNameInRow="棚番コード" msprop:Generator_ColumnPropNameInTable="棚番コードColumn" msprop:Generator_UserColumnName="棚番コード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="在庫管理区分" msprop:Generator_ColumnVarNameInTable="column在庫管理区分" msprop:Generator_ColumnPropNameInRow="在庫管理区分" msprop:Generator_ColumnPropNameInTable="在庫管理区分Column" msprop:Generator_UserColumnName="在庫管理区分" type="xs:boolean" />
+              <xs:element name="諸口区分" msprop:Generator_ColumnVarNameInTable="column諸口区分" msprop:Generator_ColumnPropNameInRow="諸口区分" msprop:Generator_ColumnPropNameInTable="諸口区分Column" msprop:Generator_UserColumnName="諸口区分" type="xs:boolean" />
+              <xs:element name="規格諸口区分" msprop:Generator_ColumnVarNameInTable="column規格諸口区分" msprop:Generator_ColumnPropNameInRow="規格諸口区分" msprop:Generator_ColumnPropNameInTable="規格諸口区分Column" msprop:Generator_UserColumnName="規格諸口区分" type="xs:boolean" />
+              <xs:element name="セット区分" msprop:Generator_ColumnVarNameInTable="columnセット区分" msprop:Generator_ColumnPropNameInRow="セット区分" msprop:Generator_ColumnPropNameInTable="セット区分Column" msprop:Generator_UserColumnName="セット区分" type="xs:boolean" />
+              <xs:element name="定価" msprop:Generator_ColumnVarNameInTable="column定価" msprop:Generator_ColumnPropNameInRow="定価" msprop:Generator_ColumnPropNameInTable="定価Column" msprop:Generator_UserColumnName="定価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="単価" msprop:Generator_ColumnVarNameInTable="column単価" msprop:Generator_ColumnPropNameInRow="単価" msprop:Generator_ColumnPropNameInTable="単価Column" msprop:Generator_UserColumnName="単価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="原価単価" msprop:Generator_ColumnVarNameInTable="column原価単価" msprop:Generator_ColumnPropNameInRow="原価単価" msprop:Generator_ColumnPropNameInTable="原価単価Column" msprop:Generator_UserColumnName="原価単価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="評価単価" msprop:Generator_ColumnVarNameInTable="column評価単価" msprop:Generator_ColumnPropNameInRow="評価単価" msprop:Generator_ColumnPropNameInTable="評価単価Column" msprop:Generator_UserColumnName="評価単価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="評価単価前" msprop:Generator_ColumnVarNameInTable="column評価単価前" msprop:Generator_ColumnPropNameInRow="評価単価前" msprop:Generator_ColumnPropNameInTable="評価単価前Column" msprop:Generator_UserColumnName="評価単価前" type="xs:decimal" minOccurs="0" />
+              <xs:element name="現在在庫数" msprop:Generator_ColumnVarNameInTable="column現在在庫数" msprop:Generator_ColumnPropNameInRow="現在在庫数" msprop:Generator_ColumnPropNameInTable="現在在庫数Column" msprop:Generator_UserColumnName="現在在庫数" type="xs:decimal" />
+              <xs:element name="外内税区分" msprop:Generator_ColumnVarNameInTable="column外内税区分" msprop:Generator_ColumnPropNameInRow="外内税区分" msprop:Generator_ColumnPropNameInTable="外内税区分Column" msprop:Generator_UserColumnName="外内税区分" type="xs:short" minOccurs="0" />
+              <xs:element name="消費税率" msprop:Generator_ColumnVarNameInTable="column消費税率" msprop:Generator_ColumnPropNameInRow="消費税率" msprop:Generator_ColumnPropNameInTable="消費税率Column" msprop:Generator_UserColumnName="消費税率" type="xs:decimal" minOccurs="0" />
+              <xs:element name="新消費税率" msprop:Generator_ColumnVarNameInTable="column新消費税率" msprop:Generator_ColumnPropNameInRow="新消費税率" msprop:Generator_ColumnPropNameInTable="新消費税率Column" msprop:Generator_UserColumnName="新消費税率" type="xs:decimal" minOccurs="0" />
+              <xs:element name="新消費税適用" msprop:Generator_ColumnVarNameInTable="column新消費税適用" msprop:Generator_ColumnPropNameInRow="新消費税適用" msprop:Generator_ColumnPropNameInTable="新消費税適用Column" msprop:Generator_UserColumnName="新消費税適用" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="商分類_xFF21_コード" msprop:Generator_ColumnVarNameInTable="column商分類Ａコード" msprop:Generator_ColumnPropNameInRow="商分類Ａコード" msprop:Generator_ColumnPropNameInTable="商分類ＡコードColumn" msprop:Generator_UserColumnName="商分類Ａコード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="商分類_xFF22_コード" msprop:Generator_ColumnVarNameInTable="column商分類Ｂコード" msprop:Generator_ColumnPropNameInRow="商分類Ｂコード" msprop:Generator_ColumnPropNameInTable="商分類ＢコードColumn" msprop:Generator_UserColumnName="商分類Ｂコード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="商分類_xFF23_コード" msprop:Generator_ColumnVarNameInTable="column商分類Ｃコード" msprop:Generator_ColumnPropNameInRow="商分類Ｃコード" msprop:Generator_ColumnPropNameInTable="商分類ＣコードColumn" msprop:Generator_UserColumnName="商分類Ｃコード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ランク_xFF11_単価" msprop:Generator_ColumnVarNameInTable="columnランク１単価" msprop:Generator_ColumnPropNameInRow="ランク１単価" msprop:Generator_ColumnPropNameInTable="ランク１単価Column" msprop:Generator_UserColumnName="ランク１単価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ランク_xFF12_単価" msprop:Generator_ColumnVarNameInTable="columnランク２単価" msprop:Generator_ColumnPropNameInRow="ランク２単価" msprop:Generator_ColumnPropNameInTable="ランク２単価Column" msprop:Generator_UserColumnName="ランク２単価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ランク_xFF13_単価" msprop:Generator_ColumnVarNameInTable="columnランク３単価" msprop:Generator_ColumnPropNameInRow="ランク３単価" msprop:Generator_ColumnPropNameInTable="ランク３単価Column" msprop:Generator_UserColumnName="ランク３単価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ランク_xFF14_単価" msprop:Generator_ColumnVarNameInTable="columnランク４単価" msprop:Generator_ColumnPropNameInRow="ランク４単価" msprop:Generator_ColumnPropNameInTable="ランク４単価Column" msprop:Generator_UserColumnName="ランク４単価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ランク_xFF15_単価" msprop:Generator_ColumnVarNameInTable="columnランク５単価" msprop:Generator_ColumnPropNameInRow="ランク５単価" msprop:Generator_ColumnPropNameInTable="ランク５単価Column" msprop:Generator_UserColumnName="ランク５単価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="最終売上日" msprop:Generator_ColumnVarNameInTable="column最終売上日" msprop:Generator_ColumnPropNameInRow="最終売上日" msprop:Generator_ColumnPropNameInTable="最終売上日Column" msprop:Generator_UserColumnName="最終売上日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="最終仕入日" msprop:Generator_ColumnVarNameInTable="column最終仕入日" msprop:Generator_ColumnPropNameInRow="最終仕入日" msprop:Generator_ColumnPropNameInTable="最終仕入日Column" msprop:Generator_UserColumnName="最終仕入日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="取引開始日" msprop:Generator_ColumnVarNameInTable="column取引開始日" msprop:Generator_ColumnPropNameInRow="取引開始日" msprop:Generator_ColumnPropNameInTable="取引開始日Column" msprop:Generator_UserColumnName="取引開始日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="作成日" msprop:Generator_ColumnVarNameInTable="column作成日" msprop:Generator_ColumnPropNameInRow="作成日" msprop:Generator_ColumnPropNameInTable="作成日Column" msprop:Generator_UserColumnName="作成日" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_Siiresaki" msprop:Generator_TableClassName="vw_SiiresakiDataTable" msprop:Generator_TableVarName="tablevw_Siiresaki" msprop:Generator_RowChangedName="vw_SiiresakiRowChanged" msprop:Generator_TablePropName="vw_Siiresaki" msprop:Generator_RowDeletingName="vw_SiiresakiRowDeleting" msprop:Generator_RowChangingName="vw_SiiresakiRowChanging" msprop:Generator_RowEvHandlerName="vw_SiiresakiRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_SiiresakiRowDeleted" msprop:Generator_RowClassName="vw_SiiresakiRow" msprop:Generator_UserTableName="vw_Siiresaki" msprop:Generator_RowEvArgName="vw_SiiresakiRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="仕入先コード" msprop:Generator_ColumnVarNameInTable="column仕入先コード" msprop:Generator_ColumnPropNameInRow="仕入先コード" msprop:Generator_ColumnPropNameInTable="仕入先コードColumn" msprop:Generator_UserColumnName="仕入先コード">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="仕入先名" msprop:Generator_ColumnVarNameInTable="column仕入先名" msprop:Generator_ColumnPropNameInRow="仕入先名" msprop:Generator_ColumnPropNameInTable="仕入先名Column" msprop:Generator_UserColumnName="仕入先名" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="略名" msprop:Generator_ColumnVarNameInTable="column略名" msprop:Generator_ColumnPropNameInRow="略名" msprop:Generator_ColumnPropNameInTable="略名Column" msprop:Generator_UserColumnName="略名" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="仕入分類" msprop:Generator_ColumnVarNameInTable="column仕入分類" msprop:Generator_ColumnPropNameInRow="仕入分類" msprop:Generator_ColumnPropNameInTable="仕入分類Column" msprop:Generator_UserColumnName="仕入分類" type="xs:short" minOccurs="0" />
+              <xs:element name="事業所コード" msprop:Generator_ColumnVarNameInTable="column事業所コード" msprop:Generator_ColumnPropNameInRow="事業所コード" msprop:Generator_ColumnPropNameInTable="事業所コードColumn" msprop:Generator_UserColumnName="事業所コード">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="諸口区分" msprop:Generator_ColumnVarNameInTable="column諸口区分" msprop:Generator_ColumnPropNameInRow="諸口区分" msprop:Generator_ColumnPropNameInTable="諸口区分Column" msprop:Generator_UserColumnName="諸口区分" type="xs:boolean" />
+              <xs:element name="担当者コード" msprop:Generator_ColumnVarNameInTable="column担当者コード" msprop:Generator_ColumnPropNameInRow="担当者コード" msprop:Generator_ColumnPropNameInTable="担当者コードColumn" msprop:Generator_UserColumnName="担当者コード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="仕入切捨区分" msprop:Generator_ColumnVarNameInTable="column仕入切捨区分" msprop:Generator_ColumnPropNameInRow="仕入切捨区分" msprop:Generator_ColumnPropNameInTable="仕入切捨区分Column" msprop:Generator_UserColumnName="仕入切捨区分" type="xs:short" minOccurs="0" />
+              <xs:element name="仕入税区分" msprop:Generator_ColumnVarNameInTable="column仕入税区分" msprop:Generator_ColumnPropNameInRow="仕入税区分" msprop:Generator_ColumnPropNameInTable="仕入税区分Column" msprop:Generator_UserColumnName="仕入税区分" type="xs:short" minOccurs="0" />
+              <xs:element name="最終支払年月日" msprop:Generator_ColumnVarNameInTable="column最終支払年月日" msprop:Generator_ColumnPropNameInRow="最終支払年月日" msprop:Generator_ColumnPropNameInTable="最終支払年月日Column" msprop:Generator_UserColumnName="最終支払年月日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="締日_xFF21_" msprop:Generator_ColumnVarNameInTable="column締日Ａ" msprop:Generator_ColumnPropNameInRow="締日Ａ" msprop:Generator_ColumnPropNameInTable="締日ＡColumn" msprop:Generator_UserColumnName="締日Ａ" type="xs:short" minOccurs="0" />
+              <xs:element name="締日_xFF22_" msprop:Generator_ColumnVarNameInTable="column締日Ｂ" msprop:Generator_ColumnPropNameInRow="締日Ｂ" msprop:Generator_ColumnPropNameInTable="締日ＢColumn" msprop:Generator_UserColumnName="締日Ｂ" type="xs:short" minOccurs="0" />
+              <xs:element name="締日_xFF23_" msprop:Generator_ColumnVarNameInTable="column締日Ｃ" msprop:Generator_ColumnPropNameInRow="締日Ｃ" msprop:Generator_ColumnPropNameInTable="締日ＣColumn" msprop:Generator_UserColumnName="締日Ｃ" type="xs:short" minOccurs="0" />
+              <xs:element name="支払残高" msprop:Generator_ColumnVarNameInTable="column支払残高" msprop:Generator_ColumnPropNameInRow="支払残高" msprop:Generator_ColumnPropNameInTable="支払残高Column" msprop:Generator_UserColumnName="支払残高" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_SiiTouroku" msprop:Generator_TableClassName="vw_SiiTourokuDataTable" msprop:Generator_TableVarName="tablevw_SiiTouroku" msprop:Generator_RowChangedName="vw_SiiTourokuRowChanged" msprop:Generator_TablePropName="vw_SiiTouroku" msprop:Generator_RowDeletingName="vw_SiiTourokuRowDeleting" msprop:Generator_RowChangingName="vw_SiiTourokuRowChanging" msprop:Generator_RowEvHandlerName="vw_SiiTourokuRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_SiiTourokuRowDeleted" msprop:Generator_RowClassName="vw_SiiTourokuRow" msprop:Generator_UserTableName="vw_SiiTouroku" msprop:Generator_RowEvArgName="vw_SiiTourokuRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="仕入先コード" msprop:Generator_ColumnVarNameInTable="column仕入先コード" msprop:Generator_ColumnPropNameInRow="仕入先コード" msprop:Generator_ColumnPropNameInTable="仕入先コードColumn" msprop:Generator_UserColumnName="仕入先コード">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="フリガナ" msprop:Generator_ColumnVarNameInTable="columnフリガナ" msprop:Generator_ColumnPropNameInRow="フリガナ" msprop:Generator_ColumnPropNameInTable="フリガナColumn" msprop:Generator_UserColumnName="フリガナ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="仕入先名" msprop:Generator_ColumnVarNameInTable="column仕入先名" msprop:Generator_ColumnPropNameInRow="仕入先名" msprop:Generator_ColumnPropNameInTable="仕入先名Column" msprop:Generator_UserColumnName="仕入先名" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="略名" msprop:Generator_ColumnVarNameInTable="column略名" msprop:Generator_ColumnPropNameInRow="略名" msprop:Generator_ColumnPropNameInTable="略名Column" msprop:Generator_UserColumnName="略名" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="仕入分類" msprop:Generator_ColumnVarNameInTable="column仕入分類" msprop:Generator_ColumnPropNameInRow="仕入分類" msprop:Generator_ColumnPropNameInTable="仕入分類Column" msprop:Generator_UserColumnName="仕入分類" type="xs:short" minOccurs="0" />
+              <xs:element name="締日_xFF21_" msprop:Generator_ColumnVarNameInTable="column締日Ａ" msprop:Generator_ColumnPropNameInRow="締日Ａ" msprop:Generator_ColumnPropNameInTable="締日ＡColumn" msprop:Generator_UserColumnName="締日Ａ" type="xs:short" minOccurs="0" />
+              <xs:element name="締日_xFF22_" msprop:Generator_ColumnVarNameInTable="column締日Ｂ" msprop:Generator_ColumnPropNameInRow="締日Ｂ" msprop:Generator_ColumnPropNameInTable="締日ＢColumn" msprop:Generator_UserColumnName="締日Ｂ" type="xs:short" minOccurs="0" />
+              <xs:element name="締日_xFF23_" msprop:Generator_ColumnVarNameInTable="column締日Ｃ" msprop:Generator_ColumnPropNameInRow="締日Ｃ" msprop:Generator_ColumnPropNameInTable="締日ＣColumn" msprop:Generator_UserColumnName="締日Ｃ" type="xs:short" minOccurs="0" />
+              <xs:element name="支払日" msprop:Generator_ColumnVarNameInTable="column支払日" msprop:Generator_ColumnPropNameInRow="支払日" msprop:Generator_ColumnPropNameInTable="支払日Column" msprop:Generator_UserColumnName="支払日" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="事業所コード" msprop:Generator_ColumnVarNameInTable="column事業所コード" msprop:Generator_ColumnPropNameInRow="事業所コード" msprop:Generator_ColumnPropNameInTable="事業所コードColumn" msprop:Generator_UserColumnName="事業所コード">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="残登録日" msprop:Generator_ColumnVarNameInTable="column残登録日" msprop:Generator_ColumnPropNameInRow="残登録日" msprop:Generator_ColumnPropNameInTable="残登録日Column" msprop:Generator_UserColumnName="残登録日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="買掛金残高" msprop:Generator_ColumnVarNameInTable="column買掛金残高" msprop:Generator_ColumnPropNameInRow="買掛金残高" msprop:Generator_ColumnPropNameInTable="買掛金残高Column" msprop:Generator_UserColumnName="買掛金残高" type="xs:decimal" minOccurs="0" />
+              <xs:element name="与信限度" msprop:Generator_ColumnVarNameInTable="column与信限度" msprop:Generator_ColumnPropNameInRow="与信限度" msprop:Generator_ColumnPropNameInTable="与信限度Column" msprop:Generator_UserColumnName="与信限度" type="xs:decimal" minOccurs="0" />
+              <xs:element name="郵便番号" msprop:Generator_ColumnVarNameInTable="column郵便番号" msprop:Generator_ColumnPropNameInRow="郵便番号" msprop:Generator_ColumnPropNameInTable="郵便番号Column" msprop:Generator_UserColumnName="郵便番号" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="都道府県名" msprop:Generator_ColumnVarNameInTable="column都道府県名" msprop:Generator_ColumnPropNameInRow="都道府県名" msprop:Generator_ColumnPropNameInTable="都道府県名Column" msprop:Generator_UserColumnName="都道府県名" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="住所_xFF11_" msprop:Generator_ColumnVarNameInTable="column住所１" msprop:Generator_ColumnPropNameInRow="住所１" msprop:Generator_ColumnPropNameInTable="住所１Column" msprop:Generator_UserColumnName="住所１" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="住所_xFF12_" msprop:Generator_ColumnVarNameInTable="column住所２" msprop:Generator_ColumnPropNameInRow="住所２" msprop:Generator_ColumnPropNameInTable="住所２Column" msprop:Generator_UserColumnName="住所２" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="電話_xFF11_" msprop:Generator_ColumnVarNameInTable="column電話１" msprop:Generator_ColumnPropNameInRow="電話１" msprop:Generator_ColumnPropNameInTable="電話１Column" msprop:Generator_UserColumnName="電話１" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="電話_xFF12_" msprop:Generator_ColumnVarNameInTable="column電話２" msprop:Generator_ColumnPropNameInRow="電話２" msprop:Generator_ColumnPropNameInTable="電話２Column" msprop:Generator_UserColumnName="電話２" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="電話_xFF13_" msprop:Generator_ColumnVarNameInTable="column電話３" msprop:Generator_ColumnPropNameInRow="電話３" msprop:Generator_ColumnPropNameInTable="電話３Column" msprop:Generator_UserColumnName="電話３" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_xFF26__xFF21__xFF38_電話_xFF11_" msprop:Generator_ColumnVarNameInTable="columnＦＡＸ電話１" msprop:Generator_ColumnPropNameInRow="ＦＡＸ電話１" msprop:Generator_ColumnPropNameInTable="ＦＡＸ電話１Column" msprop:Generator_UserColumnName="ＦＡＸ電話１" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_xFF26__xFF21__xFF38_電話_xFF12_" msprop:Generator_ColumnVarNameInTable="columnＦＡＸ電話２" msprop:Generator_ColumnPropNameInRow="ＦＡＸ電話２" msprop:Generator_ColumnPropNameInTable="ＦＡＸ電話２Column" msprop:Generator_UserColumnName="ＦＡＸ電話２" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_xFF26__xFF21__xFF38_電話_xFF13_" msprop:Generator_ColumnVarNameInTable="columnＦＡＸ電話３" msprop:Generator_ColumnPropNameInRow="ＦＡＸ電話３" msprop:Generator_ColumnPropNameInTable="ＦＡＸ電話３Column" msprop:Generator_UserColumnName="ＦＡＸ電話３" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="諸口区分" msprop:Generator_ColumnVarNameInTable="column諸口区分" msprop:Generator_ColumnPropNameInRow="諸口区分" msprop:Generator_ColumnPropNameInTable="諸口区分Column" msprop:Generator_UserColumnName="諸口区分" type="xs:boolean" />
+              <xs:element name="担当者コード" msprop:Generator_ColumnVarNameInTable="column担当者コード" msprop:Generator_ColumnPropNameInRow="担当者コード" msprop:Generator_ColumnPropNameInTable="担当者コードColumn" msprop:Generator_UserColumnName="担当者コード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="掛率" msprop:Generator_ColumnVarNameInTable="column掛率" msprop:Generator_ColumnPropNameInRow="掛率" msprop:Generator_ColumnPropNameInTable="掛率Column" msprop:Generator_UserColumnName="掛率" type="xs:decimal" minOccurs="0" />
+              <xs:element name="決済条件コード" msprop:Generator_ColumnVarNameInTable="column決済条件コード" msprop:Generator_ColumnPropNameInRow="決済条件コード" msprop:Generator_ColumnPropNameInTable="決済条件コードColumn" msprop:Generator_UserColumnName="決済条件コード" type="xs:short" minOccurs="0" />
+              <xs:element name="決済コメント" msprop:Generator_ColumnVarNameInTable="column決済コメント" msprop:Generator_ColumnPropNameInRow="決済コメント" msprop:Generator_ColumnPropNameInTable="決済コメントColumn" msprop:Generator_UserColumnName="決済コメント" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="現在買掛金残高" msprop:Generator_ColumnVarNameInTable="column現在買掛金残高" msprop:Generator_ColumnPropNameInRow="現在買掛金残高" msprop:Generator_ColumnPropNameInTable="現在買掛金残高Column" msprop:Generator_UserColumnName="現在買掛金残高" type="xs:decimal" />
+              <xs:element name="振込元コード" msprop:Generator_ColumnVarNameInTable="column振込元コード" msprop:Generator_ColumnPropNameInRow="振込元コード" msprop:Generator_ColumnPropNameInTable="振込元コードColumn" msprop:Generator_UserColumnName="振込元コード" type="xs:int" minOccurs="0" />
+              <xs:element name="銀行コード" msprop:Generator_ColumnVarNameInTable="column銀行コード" msprop:Generator_ColumnPropNameInRow="銀行コード" msprop:Generator_ColumnPropNameInTable="銀行コードColumn" msprop:Generator_UserColumnName="銀行コード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="銀行支店コード" msprop:Generator_ColumnVarNameInTable="column銀行支店コード" msprop:Generator_ColumnPropNameInRow="銀行支店コード" msprop:Generator_ColumnPropNameInTable="銀行支店コードColumn" msprop:Generator_UserColumnName="銀行支店コード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="預金区分" msprop:Generator_ColumnVarNameInTable="column預金区分" msprop:Generator_ColumnPropNameInRow="預金区分" msprop:Generator_ColumnPropNameInTable="預金区分Column" msprop:Generator_UserColumnName="預金区分" type="xs:short" minOccurs="0" />
+              <xs:element name="口座番号" msprop:Generator_ColumnVarNameInTable="column口座番号" msprop:Generator_ColumnPropNameInRow="口座番号" msprop:Generator_ColumnPropNameInTable="口座番号Column" msprop:Generator_UserColumnName="口座番号" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="仕分類_xFF21_コード" msprop:Generator_ColumnVarNameInTable="column仕分類Ａコード" msprop:Generator_ColumnPropNameInRow="仕分類Ａコード" msprop:Generator_ColumnPropNameInTable="仕分類ＡコードColumn" msprop:Generator_UserColumnName="仕分類Ａコード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="仕分類_xFF22_コード" msprop:Generator_ColumnVarNameInTable="column仕分類Ｂコード" msprop:Generator_ColumnPropNameInRow="仕分類Ｂコード" msprop:Generator_ColumnPropNameInTable="仕分類ＢコードColumn" msprop:Generator_UserColumnName="仕分類Ｂコード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="仕分類_xFF23_コード" msprop:Generator_ColumnVarNameInTable="column仕分類Ｃコード" msprop:Generator_ColumnPropNameInRow="仕分類Ｃコード" msprop:Generator_ColumnPropNameInTable="仕分類ＣコードColumn" msprop:Generator_UserColumnName="仕分類Ｃコード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="仕入切捨区分" msprop:Generator_ColumnVarNameInTable="column仕入切捨区分" msprop:Generator_ColumnPropNameInRow="仕入切捨区分" msprop:Generator_ColumnPropNameInTable="仕入切捨区分Column" msprop:Generator_UserColumnName="仕入切捨区分" type="xs:short" minOccurs="0" />
+              <xs:element name="仕入税区分" msprop:Generator_ColumnVarNameInTable="column仕入税区分" msprop:Generator_ColumnPropNameInRow="仕入税区分" msprop:Generator_ColumnPropNameInTable="仕入税区分Column" msprop:Generator_UserColumnName="仕入税区分" type="xs:short" minOccurs="0" />
+              <xs:element name="最終支払年月日" msprop:Generator_ColumnVarNameInTable="column最終支払年月日" msprop:Generator_ColumnPropNameInRow="最終支払年月日" msprop:Generator_ColumnPropNameInTable="最終支払年月日Column" msprop:Generator_UserColumnName="最終支払年月日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="支払残高" msprop:Generator_ColumnVarNameInTable="column支払残高" msprop:Generator_ColumnPropNameInRow="支払残高" msprop:Generator_ColumnPropNameInTable="支払残高Column" msprop:Generator_UserColumnName="支払残高" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_xFF11_ヶ月前支払年月日" msprop:Generator_ColumnVarNameInTable="column１ヶ月前支払年月日" msprop:Generator_ColumnPropNameInRow="_１ヶ月前支払年月日" msprop:Generator_ColumnPropNameInTable="_１ヶ月前支払年月日Column" msprop:Generator_UserColumnName="１ヶ月前支払年月日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="_xFF11_ヶ月前支払残高" msprop:Generator_ColumnVarNameInTable="column１ヶ月前支払残高" msprop:Generator_ColumnPropNameInRow="_１ヶ月前支払残高" msprop:Generator_ColumnPropNameInTable="_１ヶ月前支払残高Column" msprop:Generator_UserColumnName="１ヶ月前支払残高" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_xFF12_ヶ月前支払年月日" msprop:Generator_ColumnVarNameInTable="column２ヶ月前支払年月日" msprop:Generator_ColumnPropNameInRow="_２ヶ月前支払年月日" msprop:Generator_ColumnPropNameInTable="_２ヶ月前支払年月日Column" msprop:Generator_UserColumnName="２ヶ月前支払年月日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="_xFF12_ヶ月前支払残高" msprop:Generator_ColumnVarNameInTable="column２ヶ月前支払残高" msprop:Generator_ColumnPropNameInRow="_２ヶ月前支払残高" msprop:Generator_ColumnPropNameInTable="_２ヶ月前支払残高Column" msprop:Generator_UserColumnName="２ヶ月前支払残高" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_xFF13_ヶ月前支払年月日" msprop:Generator_ColumnVarNameInTable="column３ヶ月前支払年月日" msprop:Generator_ColumnPropNameInRow="_３ヶ月前支払年月日" msprop:Generator_ColumnPropNameInTable="_３ヶ月前支払年月日Column" msprop:Generator_UserColumnName="３ヶ月前支払年月日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="_xFF13_ヶ月前支払残高" msprop:Generator_ColumnVarNameInTable="column３ヶ月前支払残高" msprop:Generator_ColumnPropNameInRow="_３ヶ月前支払残高" msprop:Generator_ColumnPropNameInTable="_３ヶ月前支払残高Column" msprop:Generator_UserColumnName="３ヶ月前支払残高" type="xs:decimal" minOccurs="0" />
+              <xs:element name="最終仕入日" msprop:Generator_ColumnVarNameInTable="column最終仕入日" msprop:Generator_ColumnPropNameInRow="最終仕入日" msprop:Generator_ColumnPropNameInTable="最終仕入日Column" msprop:Generator_UserColumnName="最終仕入日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="取引開始日" msprop:Generator_ColumnVarNameInTable="column取引開始日" msprop:Generator_ColumnPropNameInRow="取引開始日" msprop:Generator_ColumnPropNameInTable="取引開始日Column" msprop:Generator_UserColumnName="取引開始日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="作成日" msprop:Generator_ColumnVarNameInTable="column作成日" msprop:Generator_ColumnPropNameInRow="作成日" msprop:Generator_ColumnPropNameInTable="作成日Column" msprop:Generator_UserColumnName="作成日" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_TokTouroku" msprop:Generator_TableClassName="vw_TokTourokuDataTable" msprop:Generator_TableVarName="tablevw_TokTouroku" msprop:Generator_RowChangedName="vw_TokTourokuRowChanged" msprop:Generator_TablePropName="vw_TokTouroku" msprop:Generator_RowDeletingName="vw_TokTourokuRowDeleting" msprop:Generator_RowChangingName="vw_TokTourokuRowChanging" msprop:Generator_RowEvHandlerName="vw_TokTourokuRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_TokTourokuRowDeleted" msprop:Generator_RowClassName="vw_TokTourokuRow" msprop:Generator_UserTableName="vw_TokTouroku" msprop:Generator_RowEvArgName="vw_TokTourokuRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="得意先コード" msprop:Generator_ColumnVarNameInTable="column得意先コード" msprop:Generator_ColumnPropNameInRow="得意先コード" msprop:Generator_ColumnPropNameInTable="得意先コードColumn" msprop:Generator_UserColumnName="得意先コード">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="フリガナ" msprop:Generator_ColumnVarNameInTable="columnフリガナ" msprop:Generator_ColumnPropNameInRow="フリガナ" msprop:Generator_ColumnPropNameInTable="フリガナColumn" msprop:Generator_UserColumnName="フリガナ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="得意先名" msprop:Generator_ColumnVarNameInTable="column得意先名" msprop:Generator_ColumnPropNameInRow="得意先名" msprop:Generator_ColumnPropNameInTable="得意先名Column" msprop:Generator_UserColumnName="得意先名" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="略名" msprop:Generator_ColumnVarNameInTable="column略名" msprop:Generator_ColumnPropNameInRow="略名" msprop:Generator_ColumnPropNameInTable="略名Column" msprop:Generator_UserColumnName="略名" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="郵便番号" msprop:Generator_ColumnVarNameInTable="column郵便番号" msprop:Generator_ColumnPropNameInRow="郵便番号" msprop:Generator_ColumnPropNameInTable="郵便番号Column" msprop:Generator_UserColumnName="郵便番号" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="都道府県名" msprop:Generator_ColumnVarNameInTable="column都道府県名" msprop:Generator_ColumnPropNameInRow="都道府県名" msprop:Generator_ColumnPropNameInTable="都道府県名Column" msprop:Generator_UserColumnName="都道府県名" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="住所_xFF11_" msprop:Generator_ColumnVarNameInTable="column住所１" msprop:Generator_ColumnPropNameInRow="住所１" msprop:Generator_ColumnPropNameInTable="住所１Column" msprop:Generator_UserColumnName="住所１" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="住所_xFF12_" msprop:Generator_ColumnVarNameInTable="column住所２" msprop:Generator_ColumnPropNameInRow="住所２" msprop:Generator_ColumnPropNameInTable="住所２Column" msprop:Generator_UserColumnName="住所２" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="電話_xFF11_" msprop:Generator_ColumnVarNameInTable="column電話１" msprop:Generator_ColumnPropNameInRow="電話１" msprop:Generator_ColumnPropNameInTable="電話１Column" msprop:Generator_UserColumnName="電話１" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="電話_xFF12_" msprop:Generator_ColumnVarNameInTable="column電話２" msprop:Generator_ColumnPropNameInRow="電話２" msprop:Generator_ColumnPropNameInTable="電話２Column" msprop:Generator_UserColumnName="電話２" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="電話_xFF13_" msprop:Generator_ColumnVarNameInTable="column電話３" msprop:Generator_ColumnPropNameInRow="電話３" msprop:Generator_ColumnPropNameInTable="電話３Column" msprop:Generator_UserColumnName="電話３" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_xFF26__xFF21__xFF38_電話_xFF11_" msprop:Generator_ColumnVarNameInTable="columnＦＡＸ電話１" msprop:Generator_ColumnPropNameInRow="ＦＡＸ電話１" msprop:Generator_ColumnPropNameInTable="ＦＡＸ電話１Column" msprop:Generator_UserColumnName="ＦＡＸ電話１" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_xFF26__xFF21__xFF38_電話_xFF12_" msprop:Generator_ColumnVarNameInTable="columnＦＡＸ電話２" msprop:Generator_ColumnPropNameInRow="ＦＡＸ電話２" msprop:Generator_ColumnPropNameInTable="ＦＡＸ電話２Column" msprop:Generator_UserColumnName="ＦＡＸ電話２" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_xFF26__xFF21__xFF38_電話_xFF13_" msprop:Generator_ColumnVarNameInTable="columnＦＡＸ電話３" msprop:Generator_ColumnPropNameInRow="ＦＡＸ電話３" msprop:Generator_ColumnPropNameInTable="ＦＡＸ電話３Column" msprop:Generator_UserColumnName="ＦＡＸ電話３" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="諸口区分" msprop:Generator_ColumnVarNameInTable="column諸口区分" msprop:Generator_ColumnPropNameInRow="諸口区分" msprop:Generator_ColumnPropNameInTable="諸口区分Column" msprop:Generator_UserColumnName="諸口区分" type="xs:boolean" />
+              <xs:element name="事業所コード" msprop:Generator_ColumnVarNameInTable="column事業所コード" msprop:Generator_ColumnPropNameInRow="事業所コード" msprop:Generator_ColumnPropNameInTable="事業所コードColumn" msprop:Generator_UserColumnName="事業所コード">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="担当者コード" msprop:Generator_ColumnVarNameInTable="column担当者コード" msprop:Generator_ColumnPropNameInRow="担当者コード" msprop:Generator_ColumnPropNameInTable="担当者コードColumn" msprop:Generator_UserColumnName="担当者コード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="地区コード" msprop:Generator_ColumnVarNameInTable="column地区コード" msprop:Generator_ColumnPropNameInRow="地区コード" msprop:Generator_ColumnPropNameInTable="地区コードColumn" msprop:Generator_UserColumnName="地区コード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="請求先コード" msprop:Generator_ColumnVarNameInTable="column請求先コード" msprop:Generator_ColumnPropNameInRow="請求先コード" msprop:Generator_ColumnPropNameInTable="請求先コードColumn" msprop:Generator_UserColumnName="請求先コード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="業態コード" msprop:Generator_ColumnVarNameInTable="column業態コード" msprop:Generator_ColumnPropNameInRow="業態コード" msprop:Generator_ColumnPropNameInTable="業態コードColumn" msprop:Generator_UserColumnName="業態コード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="締日_xFF21_" msprop:Generator_ColumnVarNameInTable="column締日Ａ" msprop:Generator_ColumnPropNameInRow="締日Ａ" msprop:Generator_ColumnPropNameInTable="締日ＡColumn" msprop:Generator_UserColumnName="締日Ａ" type="xs:short" minOccurs="0" />
+              <xs:element name="締日_xFF22_" msprop:Generator_ColumnVarNameInTable="column締日Ｂ" msprop:Generator_ColumnPropNameInRow="締日Ｂ" msprop:Generator_ColumnPropNameInTable="締日ＢColumn" msprop:Generator_UserColumnName="締日Ｂ" type="xs:short" minOccurs="0" />
+              <xs:element name="締日_xFF23_" msprop:Generator_ColumnVarNameInTable="column締日Ｃ" msprop:Generator_ColumnPropNameInRow="締日Ｃ" msprop:Generator_ColumnPropNameInTable="締日ＣColumn" msprop:Generator_UserColumnName="締日Ｃ" type="xs:short" minOccurs="0" />
+              <xs:element name="回収月" msprop:Generator_ColumnVarNameInTable="column回収月" msprop:Generator_ColumnPropNameInRow="回収月" msprop:Generator_ColumnPropNameInTable="回収月Column" msprop:Generator_UserColumnName="回収月" type="xs:short" minOccurs="0" />
+              <xs:element name="回収日" msprop:Generator_ColumnVarNameInTable="column回収日" msprop:Generator_ColumnPropNameInRow="回収日" msprop:Generator_ColumnPropNameInTable="回収日Column" msprop:Generator_UserColumnName="回収日" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="決済条件コード" msprop:Generator_ColumnVarNameInTable="column決済条件コード" msprop:Generator_ColumnPropNameInRow="決済条件コード" msprop:Generator_ColumnPropNameInTable="決済条件コードColumn" msprop:Generator_UserColumnName="決済条件コード" type="xs:short" minOccurs="0" />
+              <xs:element name="決済コメント" msprop:Generator_ColumnVarNameInTable="column決済コメント" msprop:Generator_ColumnPropNameInRow="決済コメント" msprop:Generator_ColumnPropNameInTable="決済コメントColumn" msprop:Generator_UserColumnName="決済コメント" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="仕入先コード" msprop:Generator_ColumnVarNameInTable="column仕入先コード" msprop:Generator_ColumnPropNameInRow="仕入先コード" msprop:Generator_ColumnPropNameInTable="仕入先コードColumn" msprop:Generator_UserColumnName="仕入先コード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="残登録日" msprop:Generator_ColumnVarNameInTable="column残登録日" msprop:Generator_ColumnPropNameInRow="残登録日" msprop:Generator_ColumnPropNameInTable="残登録日Column" msprop:Generator_UserColumnName="残登録日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="売掛金残高" msprop:Generator_ColumnVarNameInTable="column売掛金残高" msprop:Generator_ColumnPropNameInRow="売掛金残高" msprop:Generator_ColumnPropNameInTable="売掛金残高Column" msprop:Generator_UserColumnName="売掛金残高" type="xs:decimal" minOccurs="0" />
+              <xs:element name="与信限度" msprop:Generator_ColumnVarNameInTable="column与信限度" msprop:Generator_ColumnPropNameInRow="与信限度" msprop:Generator_ColumnPropNameInTable="与信限度Column" msprop:Generator_UserColumnName="与信限度" type="xs:decimal" minOccurs="0" />
+              <xs:element name="現在売掛金残高" msprop:Generator_ColumnVarNameInTable="column現在売掛金残高" msprop:Generator_ColumnPropNameInRow="現在売掛金残高" msprop:Generator_ColumnPropNameInTable="現在売掛金残高Column" msprop:Generator_UserColumnName="現在売掛金残高" type="xs:decimal" />
+              <xs:element name="得分類_xFF21_コード" msprop:Generator_ColumnVarNameInTable="column得分類Ａコード" msprop:Generator_ColumnPropNameInRow="得分類Ａコード" msprop:Generator_ColumnPropNameInTable="得分類ＡコードColumn" msprop:Generator_UserColumnName="得分類Ａコード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="得分類_xFF22_コード" msprop:Generator_ColumnVarNameInTable="column得分類Ｂコード" msprop:Generator_ColumnPropNameInRow="得分類Ｂコード" msprop:Generator_ColumnPropNameInTable="得分類ＢコードColumn" msprop:Generator_UserColumnName="得分類Ｂコード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="得分類_xFF23_コード" msprop:Generator_ColumnVarNameInTable="column得分類Ｃコード" msprop:Generator_ColumnPropNameInRow="得分類Ｃコード" msprop:Generator_ColumnPropNameInTable="得分類ＣコードColumn" msprop:Generator_UserColumnName="得分類Ｃコード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="売上切捨区分" msprop:Generator_ColumnVarNameInTable="column売上切捨区分" msprop:Generator_ColumnPropNameInRow="売上切捨区分" msprop:Generator_ColumnPropNameInTable="売上切捨区分Column" msprop:Generator_UserColumnName="売上切捨区分" type="xs:short" minOccurs="0" />
+              <xs:element name="売上税区分" msprop:Generator_ColumnVarNameInTable="column売上税区分" msprop:Generator_ColumnPropNameInRow="売上税区分" msprop:Generator_ColumnPropNameInTable="売上税区分Column" msprop:Generator_UserColumnName="売上税区分" type="xs:short" minOccurs="0" />
+              <xs:element name="ランク" msprop:Generator_ColumnVarNameInTable="columnランク" msprop:Generator_ColumnPropNameInRow="ランク" msprop:Generator_ColumnPropNameInTable="ランクColumn" msprop:Generator_UserColumnName="ランク" type="xs:short" minOccurs="0" />
+              <xs:element name="掛率" msprop:Generator_ColumnVarNameInTable="column掛率" msprop:Generator_ColumnPropNameInRow="掛率" msprop:Generator_ColumnPropNameInTable="掛率Column" msprop:Generator_UserColumnName="掛率" type="xs:decimal" minOccurs="0" />
+              <xs:element name="検収区分" msprop:Generator_ColumnVarNameInTable="column検収区分" msprop:Generator_ColumnPropNameInRow="検収区分" msprop:Generator_ColumnPropNameInTable="検収区分Column" msprop:Generator_UserColumnName="検収区分" type="xs:boolean" />
+              <xs:element name="最終請求年月日" msprop:Generator_ColumnVarNameInTable="column最終請求年月日" msprop:Generator_ColumnPropNameInRow="最終請求年月日" msprop:Generator_ColumnPropNameInTable="最終請求年月日Column" msprop:Generator_UserColumnName="最終請求年月日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="請求額" msprop:Generator_ColumnVarNameInTable="column請求額" msprop:Generator_ColumnPropNameInRow="請求額" msprop:Generator_ColumnPropNameInTable="請求額Column" msprop:Generator_UserColumnName="請求額" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_xFF11_ヶ月前請求年月日" msprop:Generator_ColumnVarNameInTable="column１ヶ月前請求年月日" msprop:Generator_ColumnPropNameInRow="_１ヶ月前請求年月日" msprop:Generator_ColumnPropNameInTable="_１ヶ月前請求年月日Column" msprop:Generator_UserColumnName="１ヶ月前請求年月日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="_xFF11_ヶ月前請求額" msprop:Generator_ColumnVarNameInTable="column１ヶ月前請求額" msprop:Generator_ColumnPropNameInRow="_１ヶ月前請求額" msprop:Generator_ColumnPropNameInTable="_１ヶ月前請求額Column" msprop:Generator_UserColumnName="１ヶ月前請求額" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_xFF12_ヶ月前請求年月日" msprop:Generator_ColumnVarNameInTable="column２ヶ月前請求年月日" msprop:Generator_ColumnPropNameInRow="_２ヶ月前請求年月日" msprop:Generator_ColumnPropNameInTable="_２ヶ月前請求年月日Column" msprop:Generator_UserColumnName="２ヶ月前請求年月日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="_xFF12_ヶ月前請求額" msprop:Generator_ColumnVarNameInTable="column２ヶ月前請求額" msprop:Generator_ColumnPropNameInRow="_２ヶ月前請求額" msprop:Generator_ColumnPropNameInTable="_２ヶ月前請求額Column" msprop:Generator_UserColumnName="２ヶ月前請求額" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_xFF13_ヶ月前請求年月日" msprop:Generator_ColumnVarNameInTable="column３ヶ月前請求年月日" msprop:Generator_ColumnPropNameInRow="_３ヶ月前請求年月日" msprop:Generator_ColumnPropNameInTable="_３ヶ月前請求年月日Column" msprop:Generator_UserColumnName="３ヶ月前請求年月日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="_xFF13_ヶ月前請求額" msprop:Generator_ColumnVarNameInTable="column３ヶ月前請求額" msprop:Generator_ColumnPropNameInRow="_３ヶ月前請求額" msprop:Generator_ColumnPropNameInTable="_３ヶ月前請求額Column" msprop:Generator_UserColumnName="３ヶ月前請求額" type="xs:decimal" minOccurs="0" />
+              <xs:element name="最終売上日" msprop:Generator_ColumnVarNameInTable="column最終売上日" msprop:Generator_ColumnPropNameInRow="最終売上日" msprop:Generator_ColumnPropNameInTable="最終売上日Column" msprop:Generator_UserColumnName="最終売上日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="取引開始日" msprop:Generator_ColumnVarNameInTable="column取引開始日" msprop:Generator_ColumnPropNameInRow="取引開始日" msprop:Generator_ColumnPropNameInTable="取引開始日Column" msprop:Generator_UserColumnName="取引開始日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="作成日" msprop:Generator_ColumnVarNameInTable="column作成日" msprop:Generator_ColumnPropNameInRow="作成日" msprop:Generator_ColumnPropNameInTable="作成日Column" msprop:Generator_UserColumnName="作成日" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_Tokuisaki" msprop:Generator_TableClassName="vw_TokuisakiDataTable" msprop:Generator_TableVarName="tablevw_Tokuisaki" msprop:Generator_RowChangedName="vw_TokuisakiRowChanged" msprop:Generator_TablePropName="vw_Tokuisaki" msprop:Generator_RowDeletingName="vw_TokuisakiRowDeleting" msprop:Generator_RowChangingName="vw_TokuisakiRowChanging" msprop:Generator_RowEvHandlerName="vw_TokuisakiRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_TokuisakiRowDeleted" msprop:Generator_RowClassName="vw_TokuisakiRow" msprop:Generator_UserTableName="vw_Tokuisaki" msprop:Generator_RowEvArgName="vw_TokuisakiRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="得意先コード" msprop:Generator_ColumnVarNameInTable="column得意先コード" msprop:Generator_ColumnPropNameInRow="得意先コード" msprop:Generator_ColumnPropNameInTable="得意先コードColumn" msprop:Generator_UserColumnName="得意先コード">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="得意先名" msprop:Generator_ColumnVarNameInTable="column得意先名" msprop:Generator_ColumnPropNameInRow="得意先名" msprop:Generator_ColumnPropNameInTable="得意先名Column" msprop:Generator_UserColumnName="得意先名" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="フリガナ" msprop:Generator_ColumnVarNameInTable="columnフリガナ" msprop:Generator_ColumnPropNameInRow="フリガナ" msprop:Generator_ColumnPropNameInTable="フリガナColumn" msprop:Generator_UserColumnName="フリガナ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="諸口区分" msprop:Generator_ColumnVarNameInTable="column諸口区分" msprop:Generator_ColumnPropNameInRow="諸口区分" msprop:Generator_ColumnPropNameInTable="諸口区分Column" msprop:Generator_UserColumnName="諸口区分" type="xs:boolean" />
+              <xs:element name="事業所コード" msprop:Generator_ColumnVarNameInTable="column事業所コード" msprop:Generator_ColumnPropNameInRow="事業所コード" msprop:Generator_ColumnPropNameInTable="事業所コードColumn" msprop:Generator_UserColumnName="事業所コード">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="担当者コード" msprop:Generator_ColumnVarNameInTable="column担当者コード" msprop:Generator_ColumnPropNameInRow="担当者コード" msprop:Generator_ColumnPropNameInTable="担当者コードColumn" msprop:Generator_UserColumnName="担当者コード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="請求先コード" msprop:Generator_ColumnVarNameInTable="column請求先コード" msprop:Generator_ColumnPropNameInRow="請求先コード" msprop:Generator_ColumnPropNameInTable="請求先コードColumn" msprop:Generator_UserColumnName="請求先コード" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="売上切捨区分" msprop:Generator_ColumnVarNameInTable="column売上切捨区分" msprop:Generator_ColumnPropNameInRow="売上切捨区分" msprop:Generator_ColumnPropNameInTable="売上切捨区分Column" msprop:Generator_UserColumnName="売上切捨区分" type="xs:short" minOccurs="0" />
+              <xs:element name="売上税区分" msprop:Generator_ColumnVarNameInTable="column売上税区分" msprop:Generator_ColumnPropNameInRow="売上税区分" msprop:Generator_ColumnPropNameInTable="売上税区分Column" msprop:Generator_UserColumnName="売上税区分" type="xs:short" minOccurs="0" />
+              <xs:element name="ランク" msprop:Generator_ColumnVarNameInTable="columnランク" msprop:Generator_ColumnPropNameInRow="ランク" msprop:Generator_ColumnPropNameInTable="ランクColumn" msprop:Generator_UserColumnName="ランク" type="xs:short" minOccurs="0" />
+              <xs:element name="掛率" msprop:Generator_ColumnVarNameInTable="column掛率" msprop:Generator_ColumnPropNameInRow="掛率" msprop:Generator_ColumnPropNameInTable="掛率Column" msprop:Generator_UserColumnName="掛率" type="xs:decimal" minOccurs="0" />
+              <xs:element name="最終請求年月日" msprop:Generator_ColumnVarNameInTable="column最終請求年月日" msprop:Generator_ColumnPropNameInRow="最終請求年月日" msprop:Generator_ColumnPropNameInTable="最終請求年月日Column" msprop:Generator_UserColumnName="最終請求年月日" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="締日_xFF21_" msprop:Generator_ColumnVarNameInTable="column締日Ａ" msprop:Generator_ColumnPropNameInRow="締日Ａ" msprop:Generator_ColumnPropNameInTable="締日ＡColumn" msprop:Generator_UserColumnName="締日Ａ" type="xs:short" minOccurs="0" />
+              <xs:element name="締日_xFF22_" msprop:Generator_ColumnVarNameInTable="column締日Ｂ" msprop:Generator_ColumnPropNameInRow="締日Ｂ" msprop:Generator_ColumnPropNameInTable="締日ＢColumn" msprop:Generator_UserColumnName="締日Ｂ" type="xs:short" minOccurs="0" />
+              <xs:element name="締日_xFF23_" msprop:Generator_ColumnVarNameInTable="column締日Ｃ" msprop:Generator_ColumnPropNameInRow="締日Ｃ" msprop:Generator_ColumnPropNameInTable="締日ＣColumn" msprop:Generator_UserColumnName="締日Ｃ" type="xs:short" minOccurs="0" />
+              <xs:element name="請求額" msprop:Generator_ColumnVarNameInTable="column請求額" msprop:Generator_ColumnPropNameInRow="請求額" msprop:Generator_ColumnPropNameInTable="請求額Column" msprop:Generator_UserColumnName="請求額" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T商品変換マスタ" msprop:Generator_TableClassName="T商品変換マスタDataTable" msprop:Generator_TableVarName="tableT商品変換マスタ" msprop:Generator_RowChangedName="T商品変換マスタRowChanged" msprop:Generator_TablePropName="T商品変換マスタ" msprop:Generator_RowDeletingName="T商品変換マスタRowDeleting" msprop:Generator_RowChangingName="T商品変換マスタRowChanging" msprop:Generator_RowEvHandlerName="T商品変換マスタRowChangeEventHandler" msprop:Generator_RowDeletedName="T商品変換マスタRowDeleted" msprop:Generator_RowClassName="T商品変換マスタRow" msprop:Generator_UserTableName="T商品変換マスタ" msprop:Generator_RowEvArgName="T商品変換マスタRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="_xFF25__xFF2F__xFF33_商品コード" msprop:Generator_ColumnVarNameInTable="columnＥＯＳ商品コード" msprop:Generator_ColumnPropNameInRow="ＥＯＳ商品コード" msprop:Generator_ColumnPropNameInTable="ＥＯＳ商品コードColumn" msprop:Generator_UserColumnName="ＥＯＳ商品コード">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="表示価格" msprop:Generator_ColumnVarNameInTable="column表示価格" msprop:Generator_ColumnPropNameInRow="表示価格" msprop:Generator_ColumnPropNameInTable="表示価格Column" msprop:Generator_UserColumnName="表示価格" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_xFF2A__xFF21__xFF2E_コード" msprop:Generator_ColumnVarNameInTable="columnＪＡＮコード" msprop:Generator_ColumnPropNameInRow="ＪＡＮコード" msprop:Generator_ColumnPropNameInTable="ＪＡＮコードColumn" msprop:Generator_UserColumnName="ＪＡＮコード">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="店舗売価" msprop:Generator_ColumnVarNameInTable="column店舗売価" msprop:Generator_ColumnPropNameInRow="店舗売価" msprop:Generator_ColumnPropNameInTable="店舗売価Column" msprop:Generator_UserColumnName="店舗売価" type="xs:decimal" minOccurs="0" />
+              <xs:element name="得意先コード" msprop:Generator_ColumnVarNameInTable="column得意先コード" msprop:Generator_ColumnPropNameInRow="得意先コード" msprop:Generator_ColumnPropNameInTable="得意先コードColumn" msprop:Generator_UserColumnName="得意先コード">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_Ryakumei_Sir" />
+      <xs:field xpath="mstns:SirCD" />
+    </xs:unique>
+    <xs:unique name="vw_Ryakumei_Tok_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_Ryakumei_Tok" />
+      <xs:field xpath="mstns:TokCD" />
+    </xs:unique>
+    <xs:unique name="vw_Shohin_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_Shohin" />
+      <xs:field xpath="mstns:商品コード" />
+    </xs:unique>
+    <xs:unique name="vw_ShoTouroku_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_ShoTouroku" />
+      <xs:field xpath="mstns:商品コード" />
+    </xs:unique>
+    <xs:unique name="vw_Siiresaki_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_Siiresaki" />
+      <xs:field xpath="mstns:仕入先コード" />
+    </xs:unique>
+    <xs:unique name="vw_SiiTouroku_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_SiiTouroku" />
+      <xs:field xpath="mstns:仕入先コード" />
+    </xs:unique>
+    <xs:unique name="vw_TokTouroku_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_TokTouroku" />
+      <xs:field xpath="mstns:得意先コード" />
+    </xs:unique>
+    <xs:unique name="vw_Tokuisaki_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_Tokuisaki" />
+      <xs:field xpath="mstns:得意先コード" />
+    </xs:unique>
+    <xs:unique name="T商品変換マスタ_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:T商品変換マスタ" />
+      <xs:field xpath="mstns:_xFF25__xFF2F__xFF33_商品コード" />
+      <xs:field xpath="mstns:_xFF2A__xFF21__xFF2E_コード" />
+      <xs:field xpath="mstns:得意先コード" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

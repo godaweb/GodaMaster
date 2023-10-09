@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="db_test.exe" version="1.0.0.1" publicKeyToken="2c7a8f8793c47845" language="neutral" processorArchitecture="x86" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="db_test" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="db_test.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC マニフェスト オプション
+          Windows のユーザー アカウント制御のレベルを変更するには、
+          requestedExecutionLevel ノードを以下のいずれかで置換します。
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         下位互換性を保つためにファイルおよびレジストリの仮想化を使用する場合、
+         requestedExecutionLevel ノードを削除します。
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="GrapeCity.Framework.InputMan.v22" version="2.2.2012.315" publicKeyToken="FDD90F5C44B73170" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="GrapeCity.Framework.MultiRow.v22" version="2.2.2012.315" publicKeyToken="FDD90F5C44B73170" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="GrapeCity.Win.Editors.v70" version="7.0.2012.1121" publicKeyToken="0CE01A33CE55CA12" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="GrapeCity.Win.MultiRow.v70" version="7.0.2012.1121" publicKeyToken="0F7A722EE3C2BDD9" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="db_test.exe" size="1059328">
+      <assemblyIdentity name="db_test" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>MXue4hID/nkaG2NywHnho8zBWrk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ja\GrapeCity.Framework.MultiRow.v22.resources.dll" size="13312">
+      <assemblyIdentity name="GrapeCity.Framework.MultiRow.v22.resources" version="2.2.2012.315" publicKeyToken="FDD90F5C44B73170" language="ja" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>aeBrVAthqRuj3qLvWnubskwsk8g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ja\GrapeCity.Win.MultiRow.v70.resources.dll" size="327680">
+      <assemblyIdentity name="GrapeCity.Win.MultiRow.v70.resources" version="7.0.2012.1121" publicKeyToken="0F7A722EE3C2BDD9" language="ja" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>nekTxdYJpBjdQTkky2tiFA5Ny5A=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="db_test.exe.config" size="574">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>YpkU40ZSdacli75Un2mFbjI6OAg=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=user-PC\ohata" issuerKeyHash="065ae11016bb995f3a0025f930f3c36a4a103c2e" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>gP55V6VgCZ5Hr2dAay8QBasRx+A=</DigestValue></Reference></SignedInfo><SignatureValue>W11qUU50G/9VINuV2Q8hcOPxYSfn2BfeGelz5/slRscPA/nMWmaMgD1A3PtQPvImF648hvZde/t+YJ3neAvdpLgm9Up8MuhM7eORihuUIfWpPj+z8rU5Sthf+FtH/asLvpiHADLUvWt+4ahfmPcx2udZ8sY+V6AYhP54iNLVvIc=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>uwfZA/jiOkZiKv6KYwbVUGOp4+Ro07Cm8aem0jfrHN8SiAVBB3ohmp7VSdZxh1NPoYnywLnO9cs6tJR1VGFrbvARe2NXvjQD1dRS3JbyZhqcK9Z1U1DIcEQL+kOJz0N7Y6tLrsF9SCBOY14kM82GjMYJ5aNPkiH4ohjJUsHN46E=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="e0c711ab05102f6b4067af479e0960a55779fe80" Description="" Url=""><as:assemblyIdentity name="db_test.exe" version="1.0.0.1" publicKeyToken="2c7a8f8793c47845" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=user-PC\ohata</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>vm9bBKJk66zNfrMEOYadJ6Hce5M=</DigestValue></Reference></SignedInfo><SignatureValue>XizCnotf+pAYFjNH9GeLm94KfMJ/IGQG/YTbbCUdEYcvt2wnIeuJQbG1jJm/T+30his9sfHzO9Ka9f0FFlvTGD2x9q/i+Y786NGORIDVbVRBvg4EFw3d7q2VLbEtsPhxgEZ3U300c+8xmeq02xLeMh3QRkuy5+HkEVencg7d0+s=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>uwfZA/jiOkZiKv6KYwbVUGOp4+Ro07Cm8aem0jfrHN8SiAVBB3ohmp7VSdZxh1NPoYnywLnO9cs6tJR1VGFrbvARe2NXvjQD1dRS3JbyZhqcK9Z1U1DIcEQL+kOJz0N7Y6tLrsF9SCBOY14kM82GjMYJ5aNPkiH4ohjJUsHN46E=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBzTCCATagAwIBAgIQZNYbJXdbioxJMAkJppPKtzANBgkqhkiG9w0BAQUFADAlMSMwIQYDVQQDHhoAdQBzAGUAcgAtAFAAQwBcAG8AaABhAHQAYTAeFw0xODA1MjAxMjA0MTRaFw0xOTA1MjAxODA0MTRaMCUxIzAhBgNVBAMeGgB1AHMAZQByAC0AUABDAFwAbwBoAGEAdABhMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC7B9kD+OI6RmIq/opjBtVQY6nj5GjTsKbxp6bSN+sc3xKIBUEHeiGantVJ1nGHU0+hifLAuc71yzq0lHVUYWtu8BF7Y1e+NAPV1FLclvJmGpwr1nVTUMhwRAv6Q4nPQ3tjq0uuwX1IIE5jXiQzzYaMxgnlo0+SIfiiGMlSwc3joQIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAESVoSV6Ml4Crj4xlpQqhB/BBD9h9GYM2LbPSXHLlwMkEiGKI0kJuqP5UWgoqywhGq/wtLLdBgYGPMkF6F7i7aODXxBOxWPagrqzmJmG5ivGf5JA+I7UFg3mhusbmxBrBE4Jf+bih/wX8N4DbZu9WXxpe/BydciBj+P3N9ddczrQ</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

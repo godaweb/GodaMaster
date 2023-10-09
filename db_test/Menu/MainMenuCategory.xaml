@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="db_test.Menu.MainMenuCategory"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Focusable="True"
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <!-- メインメニューカテゴリ選択コントロール -->
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="MainMenuDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Background="WhiteSmoke" VerticalAlignment="Stretch" Focusable="False">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <Border BorderThickness="2" Padding="10" Background="Blue" Margin="5" Grid.Row="0" Focusable="False">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="4" RenderingBias="Performance" ShadowDepth="2" Color="Gray" />
+            </Border.Effect>
+            <TextBlock Text="メインメニュー" FontWeight="Bold" FontSize="18" Foreground="White" Focusable="False" />
+        </Border>
+
+        <ItemsControl x:Name="categories" ItemsSource="{Binding Categories}" Margin="4" Grid.Row="1" Focusable="False">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <RadioButton Style="{StaticResource GradientRadioButtonKey}"
+                                 GroupName="MainMenu"
+                                 HorizontalAlignment="Stretch"
+                                 Margin="5, 2"
+                                 FontWeight="Bold"
+                                 FontSize="16"
+                                 Content="{Binding Key}"
+                                 Click="OnCategoryButtonClicked"
+                                 PreviewKeyDown="OnCategoryButtonPreviewKeyDown" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+            <ItemsControl.Template>
+                <ControlTemplate>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <ItemsPresenter />
+                    </ScrollViewer>
+                </ControlTemplate>
+            </ItemsControl.Template>
+        </ItemsControl>
+
+    </Grid>
+</UserControl>
